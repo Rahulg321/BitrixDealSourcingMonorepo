@@ -69,15 +69,135 @@
     --radius: 0.5rem;
   }
 }
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1;
+  }
+
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0;
+  }
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
+  p {
+    @apply leading-7 text-black [&:not(:first-child)]:mt-6;
+  }
+
+  .lead {
+    @apply text-xl text-muted-foreground;
+  }
+}
+
+.bg-gradient-radial-sunset {
+  background-image: linear-gradient(to bottom, #ac0003 -2.94%, #ea2123 97.06%);
+}
+
+.border-radial-gradient {
+  border-width: 1.2px;
+  border-style: solid;
+
+  /* Layer 1: Inner white border with opacity */
+  border-color: rgba(255, 255, 255, 0.2);
+
+  /* Layer 2: Transparent outer border to create the gradient effect */
+  box-shadow: inset 0 0 0 1.2px rgba(255, 255, 255, 0);
+}
+
+.bg-custom-gradient {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #5d5fef 0%,
+    rgba(93, 95, 239, 0) 100%
+  );
+}
+
+.parent-container {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.big-container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.narrow-container {
+  margin-inline: auto;
+  width: min(90%, 42.5rem);
+}
+
+.block-space {
+  padding-block: min(12vh, 17rem);
+}
+
+.block-space-large {
+  padding-block: min(14vh, 20rem);
+}
+
+.block-space-mini {
+  padding-block: min(3vh, 6rem);
+}
+
+.blog-index {
+  display: columns;
+  columns: 4;
+}
+
+.blog-index > * {
+  break-inside: avoid;
+  margin-bottom: 1.5em;
+}
+/* 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  gap: 4;
+  animation: marquee 15s linear infinite;
+} */
+
+/* .marquee > * {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+} */
+
+/* @keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+} */
+
+@media screen and (max-width: 1024px) {
+  .blog-index {
+    columns: 3;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blog-index {
+    columns: 2;
+  }
+}
+
+@media screen and (max-width: 458px) {
+  .blog-index {
+    columns: 1;
   }
 }

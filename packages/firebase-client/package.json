@@ -16,6 +16,7 @@
     "typescript": "latest"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "firebase": "^10.13.1"
   }
 }
