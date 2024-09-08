@@ -13,7 +13,12 @@ const AddDealButton = () => {
 
   const onClickHandler = () => {
     startTransition(async () => {
-      const response = await addDeal();
+      const response = await addDeal(
+        "Vercel",
+        "Jaime Lannister",
+        "jaime@westores.org",
+        "9876543210"
+      );
       if (response.success) {
         toast({
           title: "Scheduled: Catch up",
