@@ -5,6 +5,12 @@ import Footer from "./components/Footer";
 import { Toaster } from "@repo/ui/components/toaster";
 
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "./components/theme-provider";
+import { ModeToggle } from "./components/mode-toggle";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+
+import { cn } from "@repo/ui/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,14 +25,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className}`}>
-        <main className="parent-container">
-          <Header />
-          {children}
-          <Footer />
-        </main>
-        <Toaster />
+    <html lang="en" className={cn(GeistSans.variable)}>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="parent-container">
+            <div className="top-4 right-4 absolute">
+              <ModeToggle />
+            </div>
+            {children}
+          </main>
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

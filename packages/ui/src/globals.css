@@ -100,6 +100,10 @@
   }
 }
 
+html {
+  font-family: var(--font-geist-sans);
+}
+
 .bg-gradient-radial-sunset {
   background-image: linear-gradient(to bottom, #ac0003 -2.94%, #ea2123 97.06%);
 }
