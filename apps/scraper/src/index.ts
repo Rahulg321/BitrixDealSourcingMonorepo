@@ -1,6 +1,8 @@
 import puppeteer, { Page, Browser } from "puppeteer";
 import dotenv from "dotenv";
+// const cheerio = require("cheerio");
 import * as cheerio from "cheerio";
+import { addDealsToDatabase, addToDb } from "@repo/firebase-client/db";
 
 dotenv.config();
 
@@ -56,8 +58,7 @@ async function navigateToNextPage(page: Page): Promise<boolean> {
   const $ = cheerio.load(html);
 
   const nextPageButton = $("ul.wpgb-pagination li.wpgb-page a").filter(
-    (_: number, element: cheerio.Element) =>
-      $(element).text().includes("Next →")
+    (_: number, element: any) => $(element).text().includes("Next →")
   );
 
   if (nextPageButton.length > 0) {
@@ -87,18 +88,27 @@ async function main() {
     const page = result.page;
     const allScrapedData = [];
 
+    let counter = 1;
     let hasNextPage = true;
     while (hasNextPage) {
+      if (counter === 19) {
+        break;
+      }
+
       const html = await page.content();
       const scrapedData = await extractTextContent(html);
+      console.log(`scraped data from page ${counter}`, scrapedData);
       allScrapedData.push(...scrapedData);
-      console.log("Scraped Data from current page:", scrapedData);
 
+      counter++;
       hasNextPage = await navigateToNextPage(page);
     }
 
-    console.log("All scraped data is ", allScrapedData);
-    console.log("Done scraping all pages");
+    console.log("length of scraped data", allScrapedData.length);
+
+    console.log("adding to firebase");
+    // await addDealsToDatabase(allScrapedData);
+    console.log("done adding to firebase");
   } catch (error: any) {
     console.error("Error occurred", error.message);
   } finally {

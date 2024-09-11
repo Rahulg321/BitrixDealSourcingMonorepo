@@ -10,8 +10,8 @@ export async function findContact(contactName: string, contactEmail: string) {
         filter: {
           NAME: contactName,
           EMAIL: contactEmail,
-        }, // Searching by contact name and email
-        select: ["ID", "NAME", "EMAIL"], // Only return ID, Name, and Email of the contact
+        },
+        select: ["ID", "NAME", "EMAIL"],
       }
     );
 

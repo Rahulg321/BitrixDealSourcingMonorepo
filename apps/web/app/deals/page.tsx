@@ -3,7 +3,7 @@ import React from "react";
 const page = () => {
   return (
     <section className="container block-space">
-      <h1>All Available Deals</h1>
+      <h1>Bitrix Deals</h1>
     </section>
   );
 };

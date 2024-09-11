@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
 import "@repo/ui/globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { Toaster } from "@repo/ui/components/toaster";
 
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
 import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
 
 import { cn } from "@repo/ui/lib/utils";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,12 +26,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="parent-container">
-            <div className="top-4 right-4 absolute">
-              <ModeToggle />
-            </div>
-            {children}
-          </main>
+          <main className="parent-container">{children}</main>
           <Toaster />
         </ThemeProvider>
       </body>
