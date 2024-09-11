@@ -23,6 +23,7 @@ import {
   Tag,
 } from "lucide-react";
 import Link from "next/link";
+import ScreenDealDialog from "./dialogs/ScreenDealDialog";
 
 export type DealCardProps = {
   id: string;
@@ -65,6 +66,13 @@ const DealCard = ({
               state={state}
               category={category}
             />
+            {link && (
+              <Button className="w-full" size={"icon"} asChild>
+                <Link href={link}>
+                  <Globe className=" h-4 w-4" />
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
         {/* <Badge className="mt-1 w-fit">{industry}</Badge> */}
@@ -122,13 +130,7 @@ const DealCard = ({
           <EyeIcon className="mr-2 h-4 w-4" /> View Details
         </Button>
 
-        {link && (
-          <Button className="w-full" variant={"outline"} asChild>
-            <Link href={link}>
-              <Globe className="mr-2 h-4 w-4" /> Visit Site
-            </Link>
-          </Button>
-        )}
+        <ScreenDealDialog />
       </CardFooter>
     </Card>
   );
