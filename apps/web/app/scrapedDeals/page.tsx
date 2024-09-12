@@ -17,8 +17,6 @@ const ScrapedDealsPage = async () => {
   let fileContent;
   fileContent = await fs.readFile(filePath, "utf-8");
 
-  console.log("deals", deals);
-
   return (
     <section className="container block-space">
       <div className="flex gap-4 items-center  mb-4">

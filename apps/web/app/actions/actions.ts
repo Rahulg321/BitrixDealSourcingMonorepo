@@ -176,31 +176,52 @@ export const addDealToCRM = async ({
       contactPhone
     );
 
+    const cleanedRevenue = parseFloat(revenue.replace(/[^0-9.]/g, ""));
+    if (isNaN(cleanedRevenue)) {
+      throw new Error(
+        "Invalid revenue: Please ensure the revenue value is numeric."
+      );
+    }
+
+    // Step 4: Clean and convert the asking price if it exists
+    let cleanedAskingPrice = null;
+    if (asking_price) {
+      cleanedAskingPrice = parseFloat(asking_price.replace(/[^0-9.]/g, ""));
+      if (isNaN(cleanedAskingPrice)) {
+        throw new Error(
+          "Invalid asking price: Please ensure the value is numeric."
+        );
+      }
+    }
     // Step 3: Prepare deal data based on the deal card props
     const data = {
       fields: {
         TITLE: title, // Title of the deal, from the prop
         COMPANY_ID: company.result, // Company ID from Bitrix CRM
         CONTACT_ID: contact.result, // Contact ID from Bitrix CRM
-        UF_CRM_1715146259470: revenue, // EBITDA (Revenue), mapped to the custom field for revenue
+        OPPORTUNITY: cleanedAskingPrice,
+        UF_CRM_1715146259470: cleanedRevenue, // EBITDA (Revenue), now a valid number
         UF_CRM_1715146372084: link, // CIM Link (mapped to the provided link field)
-        UF_CRM_1711452630282: [{ file: "Teaser Document" }], // Teaser Doc (static for now, but can be dynamic)
+        UF_CRM_1711452630282: [{ file: main_content }], // Teaser Doc (static for now, but can be dynamic)
         UF_CRM_1711453168658: state, // Location, mapped to the state prop
-        OPPORTUNITY: asking_price, // Asking price as opportunity (mapped to the asking_price prop)
         CURRENCY_ID: "USD", // Currency, assuming USD as a default
         COMMENTS: main_content, // Additional deal content, saved in the comments field
         CATEGORY_ID: category, // Category field (mapped to category prop if Bitrix supports it)
         UF_CRM_UNDER_CONTRACT: under_contract ? "Yes" : "No", // A custom field for under contract status
         UF_CRM_LISTING_CODE: listing_code, // A custom field for the listing code
-        UF_CRM_TEASER: main_content,
+        UF_CRM_TEASER: main_content, // Custom field for teaser content
       },
     };
+
+    console.log("data being published is", data);
 
     // Step 4: Send the deal data to the CRM
     const response = await axios.post(
       `https://darkalphacapital.bitrix24.com/rest/21/${process.env.BITRIX_SECRET_KEY}/crm.deal.add.json`,
       data
     );
+
+    console.log("Response", response);
 
     console.log("ADDED DEAL TO THE CRM");
     // return {
@@ -212,12 +233,10 @@ export const addDealToCRM = async ({
       message: "ADDED DEAL TO THE CRM",
     };
   } catch (error: any) {
-    console.error(
-      "An error occurred while submitting the deal to CRM:",
-      error.message
-    );
+    console.error("An error occurred while submitting the deal to CRM:", error);
     return {
-      error: "COULD NOT SEND DEAL TO THE CRM",
+      type: "error",
+      message: "An error occurred while submitting the deal to CRM",
     };
   }
 };

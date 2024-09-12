@@ -25,6 +25,7 @@ const EditDealDialog = ({
   state,
   category,
   fileContent,
+  main_content,
 }: DealCardProps) => {
   const [openDialog, setOpenDialog] = useState(false);
   return (
@@ -55,6 +56,7 @@ const EditDealDialog = ({
             category={category}
             setOpenDialog={setOpenDialog}
             fileContent={fileContent}
+            main_content={main_content}
           />
         </div>
       </DialogContent>
