@@ -3,6 +3,7 @@
 import {
   deleteDealFromDatabase,
   editDealInDatabase,
+  updateDealStatusFirebase,
 } from "@repo/firebase-client/db";
 import { revalidatePath } from "next/cache";
 import {
@@ -48,6 +49,34 @@ export const editDealFromFirebase = async (
     return {
       type: "error",
       message: "Could not edit deal from firebase",
+    };
+  }
+};
+
+export const updateDealStatus = async (
+  dealId: string,
+  status: "Approved" | "Rejected",
+  explanation: string
+) => {
+  try {
+    if (!dealId || !status || !explanation) {
+      return {
+        type: "error",
+        message: "Deal ID, status, and explanation are required",
+      };
+    }
+
+    await updateDealStatusFirebase(dealId, status, explanation);
+    revalidatePath("/scrapedDeals");
+    return {
+      type: "success",
+      message: "Successfully deleted deal from firebase",
+    };
+  } catch (error) {
+    console.error("an error occured", error);
+    return {
+      type: "error",
+      message: "Could not delete deal from firebase",
     };
   }
 };

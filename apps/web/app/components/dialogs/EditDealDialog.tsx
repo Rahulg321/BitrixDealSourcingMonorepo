@@ -24,6 +24,7 @@ const EditDealDialog = ({
   listing_code,
   state,
   category,
+  fileContent,
 }: DealCardProps) => {
   const [openDialog, setOpenDialog] = useState(false);
   return (
@@ -37,12 +38,10 @@ const EditDealDialog = ({
         <DialogHeader></DialogHeader>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="p-4 content-center">
-            <DialogTitle className="text-xl font-bold flex items-center">
-              Edit Deal <Pen className="h-4 w-4 ml-2" />
-            </DialogTitle>
-            <DialogDescription className="text-md">
+            <h2 className="font-bold flex items-center mb-4">Edit this Deal</h2>
+            <h4 className=" font-normal text-muted-foreground">
               This will edit the deal {title} within the database
-            </DialogDescription>
+            </h4>
           </div>
           <EditDealForm
             id={id}
@@ -55,6 +54,7 @@ const EditDealDialog = ({
             state={state}
             category={category}
             setOpenDialog={setOpenDialog}
+            fileContent={fileContent}
           />
         </div>
       </DialogContent>

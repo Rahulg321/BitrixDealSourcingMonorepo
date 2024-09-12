@@ -1,9 +1,20 @@
 import { getDocumentsWithLimit } from "@repo/firebase-client/db";
 import React from "react";
 import DealCard from "../components/DealCard";
+import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
+import path from "path";
 
 const ScrapedDealsPage = async () => {
   const deals = await getDocumentsWithLimit("deals");
+  const filePath = path.join(
+    process.cwd(),
+    "app/scrapedDeals",
+    "DealScreen.txt"
+  ); // Adjust the path based on the location of your file
+  let fileContent;
+  fileContent = await fs.readFile(filePath, "utf-8");
+
+  console.log("deals", deals);
 
   return (
     <section className="container block-space">
@@ -23,6 +34,8 @@ const ScrapedDealsPage = async () => {
                 asking_price={deal.data.asking_price}
                 listing_code={deal.data.listing_code}
                 state={deal.data.state}
+                fileContent={fileContent}
+                status={deal.data.status}
               />
             );
           })}

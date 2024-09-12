@@ -11,14 +11,18 @@ import {
 import ConfirmDeleteDialog from "./dialogs/ConfirmDeleteDialog";
 import EditDealDialog from "./dialogs/EditDealDialog";
 import { Button } from "@repo/ui/components/button";
+import { Badge } from "@repo/ui/components/badge";
 import {
+  Check,
   CreditCard,
+  Cross,
   DollarSignIcon,
   EyeIcon,
   Globe,
   Handshake,
   Hash,
   MapPinIcon,
+  MinusCircle,
   SendIcon,
   Tag,
 } from "lucide-react";
@@ -35,6 +39,8 @@ export type DealCardProps = {
   listing_code?: string;
   state?: string;
   category: string;
+  fileContent: any;
+  status?: "Approved" | "Rejected";
 };
 
 const DealCard = ({
@@ -47,7 +53,11 @@ const DealCard = ({
   listing_code,
   state,
   category,
+  fileContent,
+  status,
 }: DealCardProps) => {
+  console.log("status", status);
+
   return (
     <Card className="relative  overflow-hidden transition-all duration-300 hover:shadow-lg">
       <CardHeader className="pb-2">
@@ -65,6 +75,7 @@ const DealCard = ({
               listing_code={listing_code}
               state={state}
               category={category}
+              fileContent={fileContent}
             />
             {link && (
               <Button className="w-full" size={"icon"} asChild>
@@ -79,6 +90,27 @@ const DealCard = ({
       </CardHeader>
       <CardContent className="pb-2">
         <div className="space-y-2">
+          {status === "Approved" && (
+            <div className="flex items-center gap-2">
+              <Check className="mr-2 h-4 w-4" />
+              <span className="font-medium">Status:</span>
+              <Badge variant="outline">Approved</Badge>
+            </div>
+          )}
+          {status === "Rejected" && (
+            <div className="flex items-center gap-2">
+              <Cross className="mr-2 h-4 w-4" />
+              <span className="font-medium">Status:</span>
+              <Badge variant="destructive">Rejected</Badge>
+            </div>
+          )}
+          {!status && (
+            <div className="flex items-center gap-2">
+              <MinusCircle className="mr-2 h-4 w-4" />
+              <span className="font-medium">Status:</span>
+              <Badge variant="secondary">Unchecked</Badge>
+            </div>
+          )}
           <div className="flex items-start">
             <Tag className="mr-2 h-4 w-4" />
             <span className="font-medium">Category:</span>
@@ -130,7 +162,18 @@ const DealCard = ({
           <EyeIcon className="mr-2 h-4 w-4" /> View Details
         </Button>
 
-        <ScreenDealDialog />
+        <ScreenDealDialog
+          id={id}
+          title={title}
+          under_contract={under_contract}
+          revenue={revenue}
+          link={link}
+          asking_price={asking_price}
+          listing_code={listing_code}
+          state={state}
+          category={category}
+          fileContent={fileContent}
+        />
       </CardFooter>
     </Card>
   );

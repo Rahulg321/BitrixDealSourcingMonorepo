@@ -1,5 +1,3 @@
-import { Button } from "@repo/ui/components/button";
-import Link from "next/link";
 import HeroSection from "./components/sections/hero-section";
 
 export default async function Home() {
