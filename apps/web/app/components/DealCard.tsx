@@ -28,6 +28,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import ScreenDealDialog from "./dialogs/ScreenDealDialog";
+import { mainModule } from "process";
+import PublishBitrixDialog from "./dialogs/PublishBitrixDialog";
 
 export type DealCardProps = {
   id: string;
@@ -39,6 +41,7 @@ export type DealCardProps = {
   listing_code?: string;
   state?: string;
   category: string;
+  main_content: string;
   fileContent: any;
   status?: "Approved" | "Rejected";
 };
@@ -54,6 +57,7 @@ const DealCard = ({
   state,
   category,
   fileContent,
+  main_content,
   status,
 }: DealCardProps) => {
   console.log("status", status);
@@ -76,6 +80,7 @@ const DealCard = ({
               state={state}
               category={category}
               fileContent={fileContent}
+              main_content={main_content}
             />
             {link && (
               <Button className="w-full" size={"icon"} asChild>
@@ -154,10 +159,20 @@ const DealCard = ({
           </div> */}
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col gap-2">
-        <Button className="w-full">
-          <SendIcon className="mr-2 h-4 w-4" /> Publish To Bitrix
-        </Button>
+      <CardFooter className="flex flex-col gap-4">
+        <PublishBitrixDialog
+          id={id}
+          title={title}
+          under_contract={under_contract}
+          revenue={revenue}
+          link={link}
+          asking_price={asking_price}
+          listing_code={listing_code}
+          state={state}
+          category={category}
+          fileContent={fileContent}
+          main_content={main_content}
+        />
         <Button className="w-full" variant={"secondary"}>
           <EyeIcon className="mr-2 h-4 w-4" /> View Details
         </Button>
@@ -173,6 +188,7 @@ const DealCard = ({
           state={state}
           category={category}
           fileContent={fileContent}
+          main_content={main_content}
         />
       </CardFooter>
     </Card>
