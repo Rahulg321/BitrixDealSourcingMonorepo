@@ -142,3 +142,20 @@ export const updateDealStatusFirebase = async (
     throw new Error(`Failed to update the deal with ID ${dealId}.`);
   }
 };
+
+export async function fetchSpecificDeal(dealId: string) {
+  try {
+    const dealRef = doc(db, "deals", dealId); // Replace "deals" with your collection name
+    const dealSnapshot = await getDoc(dealRef);
+
+    if (dealSnapshot.exists()) {
+      return dealSnapshot.data(); // Returns the deal data
+    } else {
+      console.log("No such document!");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching the deal:", error);
+    throw error;
+  }
+}

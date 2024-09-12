@@ -173,8 +173,11 @@ const DealCard = ({
           fileContent={fileContent}
           main_content={main_content}
         />
-        <Button className="w-full" variant={"secondary"}>
-          <EyeIcon className="mr-2 h-4 w-4" /> View Details
+
+        <Button className="w-full" variant={"outline"} asChild>
+          <Link href={`/scrapedDeals/${id}`}>
+            <EyeIcon className="mr-2 h-4 w-4" /> View Details
+          </Link>
         </Button>
 
         <ScreenDealDialog
