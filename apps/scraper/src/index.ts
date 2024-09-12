@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import fs from "fs";
 import path from "path";
 import * as cheerio from "cheerio";
+import { addDealsToDatabase } from "@repo/firebase-client/db";
 
 dotenv.config();
 
@@ -148,6 +149,9 @@ async function main() {
     }
 
     console.log("All scraped data is", allScrapedData);
+    console.log("adding to firebase");
+    await addDealsToDatabase(allScrapedData);
+    console.log("Done adding to firebase");
     console.log("Done scraping all pages");
   } catch (error: any) {
     console.error("Error occurred", error.message);
