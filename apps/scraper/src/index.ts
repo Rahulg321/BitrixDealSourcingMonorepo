@@ -1,8 +1,8 @@
 import puppeteer, { Page, Browser } from "puppeteer";
 import dotenv from "dotenv";
-// const cheerio = require("cheerio");
+import fs from "fs";
+import path from "path";
 import * as cheerio from "cheerio";
-import { addDealsToDatabase, addToDb } from "@repo/firebase-client/db";
 
 dotenv.config();
 
@@ -23,33 +23,26 @@ async function extractTextContent(html: string) {
     .get(); // .get() converts the cheerio object to a plain array
 }
 
-async function extractDetailsFromDedicatedPage(page: Page, url: string) {
+function saveContentToTxtFile(content: string, filename: string) {
   try {
-    await page.goto(url, { waitUntil: "networkidle2" });
+    if (!filename.endsWith(".txt")) {
+      filename += ".txt";
+    }
 
-    // Extract all main text content from the dedicated page
-    const html = await page.content();
-    const $ = cheerio.load(html);
+    const filesDir = path.join(__dirname, "files");
+    if (!fs.existsSync(filesDir)) {
+      fs.mkdirSync(filesDir);
+    }
 
-    // Select all heading tags (h1 to h6) and paragraph tags
-    const mainContent = $("h1, h2, h3, h4, h5, h6, p")
-      .map((_: any, element: any) => {
-        const tagName = element.name;
-        const text = $(element).text().trim();
-        return `[${tagName.toUpperCase()}] ${text}`;
-      })
-      .get()
-      .join("\n\n");
+    const filePath = path.join(filesDir, filename);
+    fs.writeFileSync(filePath, content, "utf8");
 
-    return {
-      main_content: mainContent,
-    };
+    console.log(`Content successfully saved to ${filePath}`);
   } catch (error: any) {
     console.error(
-      "Error occurred while extracting details from dedicated page",
+      "Error occurred while saving content to txt file",
       error.message
     );
-    return {};
   }
 }
 
@@ -72,13 +65,61 @@ async function navigateToNextPage(page: Page): Promise<boolean> {
   return false; // No next page
 }
 
+async function navigateWithRetry(page: Page, url: string, maxRetries = 3) {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
+      return;
+    } catch (error) {
+      console.log(`Navigation attempt ${i + 1} failed. Retrying...`);
+      if (i === maxRetries - 1) throw error;
+    }
+  }
+}
+
+async function extractDetailsFromDedicatedPage(
+  page: Page,
+  url: string,
+  title: string,
+  mainPageUrl: string
+) {
+  try {
+    await navigateWithRetry(page, url, 3);
+
+    const html = await page.content();
+    const $ = cheerio.load(html);
+
+    const mainContent = $("div.elementor-widget-container")
+      .find("h1, h2, h3, h4, h5, h6, p")
+      .map((index: number, element: any) => {
+        const text = $(element).text().trim();
+        return `${text}`;
+      })
+      .get()
+      .join("\n\n");
+
+    console.log("Saving main content to a file");
+
+    // Navigate back to the main listings page
+    await page.goto(mainPageUrl, { waitUntil: "networkidle2" });
+  } catch (error: any) {
+    console.error(
+      "Error occurred while extracting details from dedicated page",
+      error.message
+    );
+    await page.goto(mainPageUrl, { waitUntil: "networkidle2" });
+  }
+}
+
 async function main() {
   let browser: Browser | null = null;
 
   try {
-    const result = await initializeBrowser(
-      "https://americanhealthcarecapital.com/current-listings/"
-    );
+    const mainPageUrl =
+      "https://americanhealthcarecapital.com/current-listings/";
+
+    const result = await initializeBrowser(mainPageUrl);
+
     if (!result) {
       console.log("Could not load page using headless browser");
       return;
@@ -88,29 +129,39 @@ async function main() {
     const page = result.page;
     const allScrapedData = [];
 
-    let counter = 1;
     let hasNextPage = true;
-    while (hasNextPage) {
-      if (counter === 19) {
-        break;
-      }
 
+    while (hasNextPage) {
       const html = await page.content();
       const scrapedData = await extractTextContent(html);
-      console.log(`scraped data from page ${counter}`, scrapedData);
-      allScrapedData.push(...scrapedData);
 
-      counter++;
+      const currentPageUrl = page.url();
+
+      for (const card of scrapedData) {
+        await extractDetailsFromDedicatedPage(
+          page,
+          card.link,
+          card.title,
+          currentPageUrl
+        );
+      }
+
+      console.log("scrapedData", scrapedData);
+      allScrapedData.push(...scrapedData);
+      console.log("Scraped Data from current page:", scrapedData);
+
       hasNextPage = await navigateToNextPage(page);
     }
 
-    console.log("length of scraped data", allScrapedData.length);
-
-    console.log("adding to firebase");
-    // await addDealsToDatabase(allScrapedData);
-    console.log("done adding to firebase");
+    console.log("All scraped data is ", allScrapedData);
+    console.log("Done scraping all pages");
   } catch (error: any) {
     console.error("Error occurred", error.message);
+    if (error.name === "TimeoutError") {
+      console.error(
+        "Navigation timeout. The website might be slow or unresponsive."
+      );
+    }
   } finally {
     if (browser) {
       await browser.close();
@@ -119,15 +170,16 @@ async function main() {
   }
 }
 
+main();
+
 export async function initializeBrowser(url: string) {
   try {
-    console.log("setting up browser");
     const browser = await puppeteer.launch({
       headless: true,
       args: ["--disable-http2", "--no-sandbox", "--disable-setuid-sandbox"],
     });
     const page = await browser.newPage();
-    console.log("page->", page);
+
     // Set a user agent to avoid being blocked by the site
     await page.setUserAgent(
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
@@ -143,5 +195,3 @@ export async function initializeBrowser(url: string) {
     return null;
   }
 }
-
-main();
