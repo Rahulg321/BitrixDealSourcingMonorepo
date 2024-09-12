@@ -95,11 +95,15 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
           ) : (
             <div>
               {object && (
-                <div className="mt-4 p-4 bg-gray-100 rounded-md">
-                  <h3 className="font-semibold text-lg">Screening Results</h3>
+                <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-md">
+                  <h3 className="font-semibold text-lg text-black dark:text-white">
+                    Screening Results
+                  </h3>
                   <div className="mt-2">
                     <div className="text-sm">
-                      <span className="font-medium">Approval Status:</span>{" "}
+                      <span className="font-medium text-black dark:text-white">
+                        Approval Status:
+                      </span>{" "}
                       <span
                         className={
                           object.approvalStatus === "Approved"
@@ -111,8 +115,10 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
                       </span>
                     </div>
                     <div className="text-sm mt-2">
-                      <span className="font-medium">Explanation:</span>{" "}
-                      <p className="text-gray-700 font-semibold">
+                      <span className="font-medium text-black dark:text-white">
+                        Explanation:
+                      </span>{" "}
+                      <p className=" font-semibold text-black dark:text-white">
                         {object.explanation}
                       </p>
                     </div>
