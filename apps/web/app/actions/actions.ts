@@ -2,6 +2,30 @@
 
 import axios from "axios";
 import { DealCardProps } from "../components/DealCard";
+// import PDFDocument from "pdfkit"; // Library to generate PDF
+
+// async function createTeaserDocFromContent(
+//   main_content: string,
+//   teaserDocPath: string
+// ): Promise<void> {
+//   return new Promise((resolve, reject) => {
+//     const doc = new PDFDocument();
+//     const stream = fs.createWriteStream(teaserDocPath);
+
+//     // Start writing to the stream
+//     doc.pipe(stream);
+
+//     // Add main content to the PDF
+//     doc.text(main_content);
+
+//     // Finalize the PDF file
+//     doc.end();
+
+//     // Resolve once the file is finished
+//     stream.on("finish", resolve);
+//     stream.on("error", reject);
+//   });
+// }
 
 export async function findContact(contactName: string, contactEmail: string) {
   try {
