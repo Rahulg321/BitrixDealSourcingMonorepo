@@ -13,19 +13,9 @@ import {
 import { useToast } from "@repo/ui/hooks/use-toast";
 import { Send, SendIcon } from "lucide-react";
 import { Button } from "@repo/ui/components/button";
+import { addDealToCRM } from "../../actions/actions";
 
-const PublishBitrixDialog = ({
-  id,
-  title,
-  under_contract,
-  revenue,
-  link,
-  asking_price,
-  listing_code,
-  state,
-  category,
-  main_content,
-}: DealCardProps) => {
+const PublishBitrixDialog = (dealProps: DealCardProps) => {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
   const [openDialog, setOpenDialog] = useState(false);
@@ -41,7 +31,8 @@ const PublishBitrixDialog = ({
         <DialogHeader>
           <DialogTitle>Publish this Deal?</DialogTitle>
           <DialogDescription>
-            This action cannot be undone. This will publish {title} to bitrix.
+            This action cannot be undone. This will publish {dealProps.title} to
+            bitrix.
           </DialogDescription>
         </DialogHeader>
         <div>
@@ -50,11 +41,11 @@ const PublishBitrixDialog = ({
             className="w-full"
             onClick={() => {
               startTransition(async () => {
-                const response = await deleteDealFromFirebase(id);
+                const response = await addDealToCRM(dealProps);
                 if (response.type === "success") {
                   toast({
                     variant: "success",
-                    title: "Successfully Deleted Deal 🎉",
+                    title: "Successfully Added Deal 🎉",
                     description: response.message,
                   });
                   setOpenDialog(false);

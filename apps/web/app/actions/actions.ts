@@ -1,6 +1,7 @@
 "use server";
 
 import axios from "axios";
+import { DealCardProps } from "../components/DealCard";
 
 export async function findContact(contactName: string, contactEmail: string) {
   try {
@@ -148,56 +149,75 @@ export async function createCompanyIfNotExists(companyName: string) {
     }
   }
 }
-
-export const addDeal = async (
-  companyName: string,
-  contactName: string,
-  contactEmail: string,
-  contactPhone: string
-) => {
+export const addDealToCRM = async ({
+  id,
+  title,
+  under_contract,
+  revenue,
+  link,
+  asking_price,
+  listing_code,
+  state,
+  category,
+  main_content,
+}: DealCardProps) => {
   try {
+    // Step 1: Create or find the company if necessary
+    const companyName = "Default Company"; // If no company info in the props, use a default or dynamic company
     const company = await createCompanyIfNotExists(companyName);
 
     // Step 2: Check if the contact exists and create it if necessary
+    const contactName = "Default Contact"; // Similarly, set contact name
+    const contactEmail = "default@example.com"; // Default or dynamic email
+    const contactPhone = "1234567890"; // Default or dynamic phone
     const contact = await createContactIfNotExists(
       contactName,
       contactEmail,
       contactPhone
     );
 
+    // Step 3: Prepare deal data based on the deal card props
     const data = {
       fields: {
-        TITLE: "New Deal Title",
-        COMPANY_ID: company.result,
-        CONTACT_ID: contact.result,
-        UF_CRM_1715146259470: 500000, // EBITDA custom field (Revenue)
-        UF_CRM_1715146372084: "https://example.com/cim", // CIM Link (Custom Field)
-        UF_CRM_1711452630282: [{ file: "Teaser Document" }], // Teaser Doc (File)
-        UF_CRM_1711453168658: "New York", // Location custom field
-        OPPORTUNITY: 1000000, // Revenue
-        CURRENCY_ID: "USD",
+        TITLE: title, // Title of the deal, from the prop
+        COMPANY_ID: company.result, // Company ID from Bitrix CRM
+        CONTACT_ID: contact.result, // Contact ID from Bitrix CRM
+        UF_CRM_1715146259470: revenue, // EBITDA (Revenue), mapped to the custom field for revenue
+        UF_CRM_1715146372084: link, // CIM Link (mapped to the provided link field)
+        UF_CRM_1711452630282: [{ file: "Teaser Document" }], // Teaser Doc (static for now, but can be dynamic)
+        UF_CRM_1711453168658: state, // Location, mapped to the state prop
+        OPPORTUNITY: asking_price, // Asking price as opportunity (mapped to the asking_price prop)
+        CURRENCY_ID: "USD", // Currency, assuming USD as a default
+        COMMENTS: main_content, // Additional deal content, saved in the comments field
+        CATEGORY_ID: category, // Category field (mapped to category prop if Bitrix supports it)
+        UF_CRM_UNDER_CONTRACT: under_contract ? "Yes" : "No", // A custom field for under contract status
+        UF_CRM_LISTING_CODE: listing_code, // A custom field for the listing code
+        UF_CRM_TEASER: main_content,
       },
     };
 
+    // Step 4: Send the deal data to the CRM
     const response = await axios.post(
       `https://darkalphacapital.bitrix24.com/rest/21/${process.env.BITRIX_SECRET_KEY}/crm.deal.add.json`,
       data
     );
 
     console.log("ADDED DEAL TO THE CRM");
+    // return {
+    //   success: "ADDED DEAL TO THE CRM",
+    //   dealId: response.data.result, // Return the ID of the newly created deal
+    // };
     return {
-      success: "ADDED DEAL TO THE CRM",
+      type: "success",
+      message: "ADDED DEAL TO THE CRM",
     };
   } catch (error: any) {
     console.error(
-      "an error occured while submitting to CRM",
-      error.status,
-      error,
+      "An error occurred while submitting the deal to CRM:",
       error.message
     );
+    return {
+      error: "COULD NOT SEND DEAL TO THE CRM",
+    };
   }
-
-  return {
-    error: "COULD NOT SEND DEAL TO THE CRM",
-  };
 };
