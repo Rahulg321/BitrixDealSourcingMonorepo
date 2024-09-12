@@ -19,6 +19,7 @@ async function extractTextContent(html: string) {
       listing_code: $(element).find("div.wpgb_code").html() || "",
       under_contract: $(element).find("div.wpgb_loi").html() || "",
       revenue: $(element).find("div.wpgb_revenue").html() || "",
+      main_content: "", // Placeholder for content from the dedicated page
     }))
     .get(); // .get() converts the cheerio object to a plain array
 }
@@ -80,9 +81,8 @@ async function navigateWithRetry(page: Page, url: string, maxRetries = 3) {
 async function extractDetailsFromDedicatedPage(
   page: Page,
   url: string,
-  title: string,
-  mainPageUrl: string
-) {
+  title: string
+): Promise<string> {
   try {
     await navigateWithRetry(page, url, 3);
 
@@ -98,16 +98,13 @@ async function extractDetailsFromDedicatedPage(
       .get()
       .join("\n\n");
 
-    console.log("Saving main content to a file");
-
-    // Navigate back to the main listings page
-    await page.goto(mainPageUrl, { waitUntil: "networkidle2" });
+    return mainContent;
   } catch (error: any) {
     console.error(
-      "Error occurred while extracting details from dedicated page",
+      `Error occurred while extracting details from ${title}:`,
       error.message
     );
-    await page.goto(mainPageUrl, { waitUntil: "networkidle2" });
+    return "";
   }
 }
 
@@ -135,25 +132,22 @@ async function main() {
       const html = await page.content();
       const scrapedData = await extractTextContent(html);
 
-      const currentPageUrl = page.url();
-
       for (const card of scrapedData) {
-        await extractDetailsFromDedicatedPage(
+        console.log(`Scraping dedicated page for: ${card.title}`);
+        const mainContent = await extractDetailsFromDedicatedPage(
           page,
           card.link,
-          card.title,
-          currentPageUrl
+          card.title
         );
+        card.main_content = mainContent; // Add the scraped content to the card
       }
 
-      console.log("scrapedData", scrapedData);
       allScrapedData.push(...scrapedData);
-      console.log("Scraped Data from current page:", scrapedData);
 
       hasNextPage = await navigateToNextPage(page);
     }
 
-    console.log("All scraped data is ", allScrapedData);
+    console.log("All scraped data is", allScrapedData);
     console.log("Done scraping all pages");
   } catch (error: any) {
     console.error("Error occurred", error.message);
