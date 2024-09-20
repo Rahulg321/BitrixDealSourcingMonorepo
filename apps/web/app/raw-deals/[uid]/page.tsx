@@ -14,17 +14,11 @@ import {
   CreditCard,
   Cross,
   DollarSignIcon,
-  Globe,
   Handshake,
   Hash,
   MapPinIcon,
   MinusCircle,
   Tag,
-  EyeIcon,
-  Home,
-  CaseUpper,
-  Divide,
-  Mail,
   Edit,
   ExternalLink,
 } from "lucide-react";
@@ -32,6 +26,7 @@ import Link from "next/link";
 import ScreenDealDialog from "../../components/dialogs/ScreenDealDialog";
 import path from "path";
 import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
+import PublishBitrixDialog from "../../components/dialogs/PublishBitrixDialog";
 
 const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
   const fetchedDeal = await fetchSpecificDeal(params.uid);
@@ -77,6 +72,20 @@ const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
             Visit Website
           </Link>
         </Button>
+
+        <PublishBitrixDialog
+          id={params.uid}
+          title={title}
+          under_contract={under_contract}
+          revenue={revenue}
+          link={link}
+          asking_price={asking_price}
+          listing_code={listing_code}
+          state={state}
+          category={category}
+          fileContent={fileContent}
+          main_content={main_content}
+        />
       </div>
       <div className="narrow-container mb-8 md:mb-10 lg:mb-12 ">
         <h1 className="text-4xl font-bold mb-4 text-center text-gray-900">

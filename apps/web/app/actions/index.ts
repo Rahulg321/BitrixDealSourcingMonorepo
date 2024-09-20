@@ -39,7 +39,10 @@ export const editDealFromFirebase = async (
 
   try {
     await editDealInDatabase(dealId, data);
+
     revalidatePath("/raw-deals");
+    revalidatePath(`/raw-deals/${dealId}`);
+
     return {
       type: "success",
       message: "Successfully edited deal from firebase",

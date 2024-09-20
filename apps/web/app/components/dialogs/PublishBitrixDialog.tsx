@@ -23,7 +23,7 @@ const PublishBitrixDialog = (dealProps: DealCardProps) => {
   return (
     <Dialog open={openDialog} onOpenChange={setOpenDialog}>
       <DialogTrigger asChild>
-        <Button variant="default" className="w-full">
+        <Button variant="destructive" className="">
           <Send className="h-4 w-4 mr-2" /> Publish to Bitrix
         </Button>
       </DialogTrigger>

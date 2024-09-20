@@ -119,6 +119,19 @@ const EditDealForm = ({
         />
         <FormField
           control={form.control}
+          name="category"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Category</FormLabel>
+              <FormControl>
+                <Input placeholder="Healthcare, Aerospace...." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
           name="revenue"
           render={({ field }) => (
             <FormItem>
