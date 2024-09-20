@@ -39,7 +39,7 @@ export const dealSchema = z.object({
   state: z.string().min(1, "State is required"),
   category: z.string().min(1, "Category is required"),
   main_content: z.string().min(1, "Teaser for a deal is required"),
-  explanation: z.string().min(1, "Category is required").optional(),
+  explanation: z.string().optional(),
 });
 
 export type DealSchemaZodType = z.infer<typeof dealSchema>;

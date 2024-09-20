@@ -58,7 +58,7 @@ const EditDealPage = async ({ params }: { params: { uid: string } }) => {
 
         <div className="narrow-container">
           <EditDealForm
-            id={id}
+            id={params.uid}
             title={title}
             under_contract={under_contract}
             revenue={revenue}
