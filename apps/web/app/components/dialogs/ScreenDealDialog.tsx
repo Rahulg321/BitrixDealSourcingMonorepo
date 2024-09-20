@@ -34,7 +34,6 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
     }
 
     try {
-      // Add your database save logic here
       console.log("Saving result to the database", object);
       startTransition(async () => {
         const response = await updateDealStatus(
@@ -42,6 +41,8 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
           object.approvalStatus as "Approved" | "Rejected",
           object.explanation as string
         );
+
+        console.log("response", response);
         if (response.type === "success") {
           toast({
             variant: "success",
@@ -70,22 +71,26 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
           <Brain className="h-4 w-4 mr-2" /> Screen Deal
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-h-[90vh] w-full max-w-4xl overflow-y-auto">
+      <DialogContent className="max-h-[90vh] w-full max-w-4xl lg:max-w-3xl md:max-w-xl sm:max-w-md sm:mx-auto sm:px-4 p-4 overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Screen Deal Against Questionnaire?</DialogTitle>
-          <DialogDescription>
+          <DialogTitle className="text-lg sm:text-base">
+            Screen Deal Against Questionnaire?
+          </DialogTitle>
+          <DialogDescription className="text-sm sm:text-xs">
             This action will screen your deal against the questionnaire using
-            llama3.1 AI model.
+            the latest OPENAI Model.
           </DialogDescription>
         </DialogHeader>
 
         <div className="mt-4">
           {isLoading ? (
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <LoaderIcon className="animate-spin h-6 w-6 text-gray-500 mr-2" />
-              <span>Screening in progress...</span>
+              <span className="text-base sm:text-sm">
+                Screening in progress...
+              </span>
               <button
-                className="ml-4 text-red-500"
+                className="ml-4 text-red-500 text-sm"
                 type="button"
                 onClick={() => stop()}
               >
@@ -96,25 +101,25 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
             <div>
               {object && (
                 <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-md">
-                  <h3 className="font-semibold text-lg text-black dark:text-white">
+                  <h3 className="font-semibold text-lg sm:text-base text-black dark:text-white">
                     Screening Results
                   </h3>
                   <div className="mt-2">
-                    <div className="text-sm">
+                    <div className="text-sm sm:text-xs">
                       <span className="font-medium text-black dark:text-white">
                         Approval Status:
                       </span>{" "}
                       <span
                         className={
                           object.approvalStatus === "Approved"
-                            ? "text-green-600 font-bold text-xl"
-                            : "text-red-600 font-bold text-xl"
+                            ? "text-green-600 font-bold text-lg"
+                            : "text-red-600 font-bold text-lg"
                         }
                       >
                         {object.approvalStatus}
                       </span>
                     </div>
-                    <div className="text-sm mt-2">
+                    <div className="text-sm sm:text-xs mt-2">
                       <span className="font-medium text-black dark:text-white">
                         Explanation:
                       </span>{" "}
@@ -124,7 +129,7 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
                     </div>
                   </div>
                   <Button
-                    className="mt-4"
+                    className="mt-4 w-full sm:w-auto"
                     variant="success"
                     onClick={saveResultToDatabase}
                   >
@@ -137,7 +142,7 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
         </div>
 
         <Button
-          className="mt-6 w-full"
+          className="mt-6 w-full sm:w-auto"
           onClick={() => submit(dealProps)}
           disabled={isLoading}
         >

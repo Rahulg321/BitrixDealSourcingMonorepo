@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@repo/ui/components/form";
 import { Input } from "@repo/ui/components/input";
+import { Textarea } from "@repo/ui/components/textarea";
 import { Button } from "@repo/ui/components/button";
 import {
   Select,
@@ -37,6 +38,8 @@ export const dealSchema = z.object({
   listing_code: z.string().optional(),
   state: z.string().min(1, "State is required"),
   category: z.string().min(1, "Category is required"),
+  main_content: z.string().min(1, "Teaser for a deal is required"),
+  explanation: z.string().min(1, "Category is required").optional(),
 });
 
 export type DealSchemaZodType = z.infer<typeof dealSchema>;
@@ -51,8 +54,10 @@ const EditDealForm = ({
   listing_code,
   state,
   category,
-  setOpenDialog,
-}: DealCardProps & { setOpenDialog: (openDialog: boolean) => void }) => {
+  main_content,
+  fileContent,
+  explanation,
+}: DealCardProps & { explanation: string }) => {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
 
@@ -67,6 +72,8 @@ const EditDealForm = ({
       listing_code: listing_code,
       state: state,
       category: category,
+      main_content: main_content,
+      explanation: explanation,
     },
   });
 
@@ -83,7 +90,6 @@ const EditDealForm = ({
           title: "Successfully Deleted Deal 🎉",
           description: response.message,
         });
-        setOpenDialog(false);
       }
       if (response.type === "error") {
         toast({
@@ -179,6 +185,36 @@ const EditDealForm = ({
               <FormLabel>Listing Code</FormLabel>
               <FormControl>
                 <Input placeholder="listing_code...." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="main_content"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Teaser</FormLabel>
+              <FormControl>
+                <Textarea placeholder="deal teaser....." {...field} rows={15} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="explanation"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Screening Explanation</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="screening explanation....."
+                  {...field}
+                  rows={15}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>

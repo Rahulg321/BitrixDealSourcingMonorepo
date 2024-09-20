@@ -6,6 +6,8 @@ import { ThemeProvider } from "./components/theme-provider";
 import { GeistSans } from "geist/font/sans";
 
 import { cn } from "@repo/ui/lib/utils";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +28,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="parent-container">{children}</main>
+          <main className="parent-container">
+            <Header />
+            {children}
+            <Footer />
+          </main>
           <Toaster />
         </ThemeProvider>
       </body>

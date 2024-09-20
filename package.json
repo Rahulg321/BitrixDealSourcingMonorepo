@@ -19,5 +19,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@ai-sdk/openai": "^0.0.60",
+    "ai": "^3.3.41",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  }
 }

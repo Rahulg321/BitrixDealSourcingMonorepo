@@ -17,6 +17,7 @@ import {
   CreditCard,
   Cross,
   DollarSignIcon,
+  Edit,
   EyeIcon,
   Globe,
   Handshake,
@@ -69,19 +70,11 @@ const DealCard = ({
           <CardTitle className="text-xl font-bold">{title}</CardTitle>
           <div className="flex gap-2 flex-col">
             <ConfirmDeleteDialog id={id} title={title} />
-            <EditDealDialog
-              id={id}
-              title={title}
-              under_contract={under_contract}
-              revenue={revenue}
-              link={link}
-              asking_price={asking_price}
-              listing_code={listing_code}
-              state={state}
-              category={category}
-              fileContent={fileContent}
-              main_content={main_content}
-            />
+            <Button variant="outline" size="icon" asChild>
+              <Link href={`/raw-deals/${id}/edit`}>
+                <Edit className="h-4 w-4" />
+              </Link>
+            </Button>
             {link && (
               <Button className="w-full" size={"icon"} asChild>
                 <Link href={link}>
@@ -175,7 +168,7 @@ const DealCard = ({
         />
 
         <Button className="w-full" variant={"outline"} asChild>
-          <Link href={`/scrapedDeals/${id}`}>
+          <Link href={`/raw-deals/${id}`}>
             <EyeIcon className="mr-2 h-4 w-4" /> View Details
           </Link>
         </Button>

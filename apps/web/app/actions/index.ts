@@ -39,7 +39,7 @@ export const editDealFromFirebase = async (
 
   try {
     await editDealInDatabase(dealId, data);
-    revalidatePath("/scrapedDeals");
+    revalidatePath("/raw-deals");
     return {
       type: "success",
       message: "Successfully edited deal from firebase",
@@ -59,7 +59,11 @@ export const updateDealStatus = async (
   explanation: string
 ) => {
   try {
+    console.log("dealId, status, and explanation", dealId, status, explanation);
+
+    // Check if all required fields are provided
     if (!dealId || !status || !explanation) {
+      console.log("Deal ID, status, and explanation are required");
       return {
         type: "error",
         message: "Deal ID, status, and explanation are required",
@@ -67,7 +71,9 @@ export const updateDealStatus = async (
     }
 
     await updateDealStatusFirebase(dealId, status, explanation);
-    revalidatePath("/scrapedDeals");
+
+    revalidatePath("/raw-deals");
+
     return {
       type: "success",
       message: "Successfully deleted deal from firebase",
@@ -91,7 +97,7 @@ export const deleteDealFromFirebase = async (dealId: string) => {
 
   try {
     await deleteDealFromDatabase(dealId);
-    revalidatePath("/scrapedDeals");
+    revalidatePath("/raw-deals");
     return {
       type: "success",
       message: "Successfully deleted deal from firebase",

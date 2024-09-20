@@ -1,6 +1,4 @@
-import { createOpenAI as createGroq } from "@ai-sdk/openai";
-import { z } from "zod";
-import { JSONParseError, TypeValidationError } from "ai";
+import { createOpenAI } from "@ai-sdk/openai";
 import { streamObject } from "ai";
 import { dealScreenSchema } from "../../components/schemas";
 
@@ -11,15 +9,18 @@ export async function POST(req: Request) {
   const context = await req.json();
   const { fileContent, ...dealContext } = context; // Extract fileContent and remove it from context
 
-  const groq = createGroq({
-    baseURL: "https://api.groq.com/openai/v1",
-    apiKey: process.env.GROQ_API_KEY,
+  const openai = createOpenAI({
+    // custom settings, e.g.
+    apiKey: process.env.AI_API_KEY,
+    compatibility: "strict", // strict mode, enable when using the OpenAI API
   });
 
+  console.log("screening deal using openai");
+
   const result = await streamObject({
-    model: groq("llama-3.1-70b-versatile"),
+    model: openai("gpt-4o"),
     schema: dealScreenSchema,
-    prompt: `Screen the following deal: ${dealContext} against this deal questionaire ${fileContent} and come at a conclusion whether this deal should be pursued or rejected. Provided an approval status and an explanation for your diagnosis`,
+    prompt: `Screen the following deal: ${dealContext} against this deal questionaire ${fileContent} and come at a conclusion whether this deal should be pursued or rejected. Provided an approval status and step by step explanation for why the deal was approved or rejected.`,
   });
 
   return result.toTextStreamResponse();
