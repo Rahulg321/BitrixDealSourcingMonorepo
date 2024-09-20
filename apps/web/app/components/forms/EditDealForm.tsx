@@ -28,11 +28,13 @@ import { Pen, PenIcon } from "lucide-react";
 import { useToast } from "@repo/ui/hooks/use-toast";
 import { DealCardProps } from "../DealCard";
 import { editDealFromFirebase } from "../../actions";
+import { useRouter } from "next/navigation";
 
 export const dealSchema = z.object({
   title: z.string().min(1, "Title is required"),
   under_contract: z.string().optional(),
   revenue: z.string().optional(),
+  status: z.enum(["Approved", "Rejected"]).optional(),
   link: z.string().url("Invalid URL").optional(),
   asking_price: z.string().optional(),
   listing_code: z.string().optional(),
@@ -57,9 +59,11 @@ const EditDealForm = ({
   main_content,
   fileContent,
   explanation,
+  status,
 }: DealCardProps & { explanation: string }) => {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
 
   const form = useForm<DealSchemaZodType>({
     resolver: zodResolver(dealSchema),
@@ -71,6 +75,7 @@ const EditDealForm = ({
       asking_price: asking_price,
       listing_code: listing_code,
       state: state,
+      status: status ? status : "Rejected",
       category: category,
       main_content: main_content,
       explanation: explanation,
@@ -87,9 +92,11 @@ const EditDealForm = ({
       if (response.type === "success") {
         toast({
           variant: "success",
-          title: "Successfully Deleted Deal 🎉",
+          title: "Successfully Edited Deal 🎉",
           description: response.message,
         });
+
+        router.push(`/raw-deals/${id}`);
       }
       if (response.type === "error") {
         toast({
@@ -126,6 +133,27 @@ const EditDealForm = ({
               <FormControl>
                 <Input placeholder="Healthcare, Aerospace...." {...field} />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="status"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Deal Approved Status</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Deal Approved by AI Model" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Approved">Approved</SelectItem>
+                  <SelectItem value="Rejected">Rejected</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
