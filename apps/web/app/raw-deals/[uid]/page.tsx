@@ -27,6 +27,7 @@ import ScreenDealDialog from "../../components/dialogs/ScreenDealDialog";
 import path from "path";
 import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
 import PublishBitrixDialog from "../../components/dialogs/PublishBitrixDialog";
+import PreviousPageButton from "../../components/buttons/go-back-button";
 
 const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
   const fetchedDeal = await fetchSpecificDeal(params.uid);
@@ -58,35 +59,45 @@ const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
 
   return (
     <section className="py-4">
-      <div className="flex gap-2 container py-4">
-        <Button asChild>
-          <Link href={`/raw-deals/${params.uid}/edit`}>
-            {" "}
-            <Edit className="mr-2 h-4 w-4" /> Edit Deal
-          </Link>
-        </Button>
-        <Button asChild variant={"outline"}>
-          <Link href={link}>
-            {" "}
-            <ExternalLink className="mr-2 h-4 w-4" />
-            Visit Website
-          </Link>
-        </Button>
+      <div className="container py-4 mb-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          {/* Previous Page Button */}
+          <div className="w-full md:w-auto">
+            <PreviousPageButton />
+          </div>
 
-        <PublishBitrixDialog
-          id={params.uid}
-          title={title}
-          under_contract={under_contract}
-          revenue={revenue}
-          link={link}
-          asking_price={asking_price}
-          listing_code={listing_code}
-          state={state}
-          category={category}
-          fileContent={fileContent}
-          main_content={main_content}
-        />
+          {/* Actions: Edit, Visit Website, Publish */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 w-full md:w-auto">
+            <Button asChild className="w-full md:w-auto">
+              <Link href={`/raw-deals/${params.uid}/edit`}>
+                <Edit className="mr-2 h-4 w-4" /> Edit Deal
+              </Link>
+            </Button>
+
+            <Button asChild variant="outline" className="w-full md:w-auto">
+              <Link href={link}>
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Visit Website
+              </Link>
+            </Button>
+
+            <PublishBitrixDialog
+              id={params.uid}
+              title={title}
+              under_contract={under_contract}
+              revenue={revenue}
+              link={link}
+              asking_price={asking_price}
+              listing_code={listing_code}
+              state={state}
+              category={category}
+              fileContent={fileContent}
+              main_content={main_content}
+            />
+          </div>
+        </div>
       </div>
+
       <div className="narrow-container mb-8 md:mb-10 lg:mb-12 ">
         <h1 className="text-4xl font-bold mb-4 text-center text-gray-900">
           Deal Overview: {title}

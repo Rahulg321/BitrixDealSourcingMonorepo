@@ -10,11 +10,13 @@ const PreviousPageButton = () => {
 
   return (
     <Button
+      variant={"outline"}
+      size={"icon"}
       onClick={() => {
         router.back();
       }}
     >
-      <ArrowLeft className="mr-2 h-4 w-4" /> Go Back
+      <ArrowLeft className="h-4 w-4" />
     </Button>
   );
 };
