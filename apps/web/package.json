@@ -13,6 +13,7 @@
     "@repo/firebase-client": "*",
     "@repo/math": "*",
     "@repo/ui": "*",
+    "@tanstack/react-table": "^8.20.5",
     "ai": "^3.3.33",
     "algoliasearch": "^5.5.3",
     "axios": "^1.7.7",
