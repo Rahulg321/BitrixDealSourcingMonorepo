@@ -21,7 +21,13 @@ export async function POST(req: Request) {
     model: openai("gpt-4o"),
     schema: dealScreenSchema,
     prompt: `Screen the following deal: ${dealContext} against this deal questionaire ${fileContent} and come at a conclusion whether this deal should be pursued or rejected. Provided an approval status and step by step explanation for why the deal was approved or rejected.`,
+    onFinish({ usage }) {
+      // your own logic, e.g. for saving the chat history or recording usage
+      console.log("token consumed for this request", usage);
+    },
   });
+
+  console.log("result of screening deal using openai", result);
 
   return result.toTextStreamResponse();
 }

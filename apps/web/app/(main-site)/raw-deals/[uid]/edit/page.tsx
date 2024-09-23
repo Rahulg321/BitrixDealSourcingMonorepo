@@ -1,9 +1,9 @@
 import { fetchSpecificDeal } from "@repo/firebase-client/db";
 import React from "react";
-import EditDealForm from "../../../components/forms/EditDealForm";
+import EditDealForm from "../../../../components/forms/EditDealForm";
 import path from "path";
 import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
-import PreviousPageButton from "../../../components/buttons/go-back-button";
+import PreviousPageButton from "../../../../components/buttons/go-back-button";
 
 const EditDealPage = async ({ params }: { params: { uid: string } }) => {
   const fetchedDeal = await fetchSpecificDeal(params.uid);

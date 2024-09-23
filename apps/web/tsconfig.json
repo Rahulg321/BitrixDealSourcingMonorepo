@@ -1,6 +1,9 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
+
   "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
     "plugins": [
       {
         "name": "next"
@@ -14,5 +17,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["./*"]
+  },
   "exclude": ["node_modules"]
 }

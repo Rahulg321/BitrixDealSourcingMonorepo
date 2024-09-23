@@ -23,11 +23,11 @@ import {
   ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
-import ScreenDealDialog from "../../components/dialogs/ScreenDealDialog";
+import ScreenDealDialog from "../../../components/dialogs/ScreenDealDialog";
 import path from "path";
 import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
-import PublishBitrixDialog from "../../components/dialogs/PublishBitrixDialog";
-import PreviousPageButton from "../../components/buttons/go-back-button";
+import PublishBitrixDialog from "../../../components/dialogs/PublishBitrixDialog";
+import PreviousPageButton from "../../../components/buttons/go-back-button";
 
 const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
   const fetchedDeal = await fetchSpecificDeal(params.uid);
@@ -38,7 +38,11 @@ const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
     );
   }
 
-  const filePath = path.join(process.cwd(), "app/raw-deals", "DealScreen.txt"); // Adjust the path based on the location of your file
+  const filePath = path.join(
+    process.cwd(),
+    "app/(main-site)/raw-deals",
+    "DealScreen.txt"
+  );
   let fileContent;
 
   fileContent = await fs.readFile(filePath, "utf-8");

@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import "@repo/ui/globals.css";
 import { Toaster } from "@repo/ui/components/toaster";
-
-import { ThemeProvider } from "./components/theme-provider";
 import { GeistSans } from "geist/font/sans";
 
 import { cn } from "@repo/ui/lib/utils";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,19 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn(GeistSans.variable)}>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main className="parent-container">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-          <Toaster />
-        </ThemeProvider>
+        <main className="">{children}</main>
+        <Toaster />
       </body>
     </html>
   );

@@ -3,10 +3,45 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@repo/ui/components/dropdown-menu";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@repo/ui/components/avatar";
+
+import instantsearch from "instantsearch.js";
+
+import {
+  InstantSearch,
+  SearchBox,
+  Hits,
+  Highlight,
+  Pagination,
+  Configure,
+} from "react-instantsearch";
+
+import { liteClient as algoliasearch } from "algoliasearch/lite";
+import { Session } from "next-auth";
+import { ChevronDown } from "lucide-react";
+import { signOut } from "next-auth/react";
+
+const searchClient = algoliasearch(
+  "KNMFQH2NOH",
+  "4ad9f0c208468e716a2cce1f1ad148fb"
+);
 
 type HeaderProps = {
+  session: Session | null;
   classname?: string;
 };
 
@@ -16,7 +51,7 @@ export const NavLinks = [
   { navlink: "/published-deals", navlabel: "Published Deals" },
 ];
 
-const Header = ({ classname }: HeaderProps) => {
+const Header = ({ classname, session }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -72,6 +107,7 @@ const Header = ({ classname }: HeaderProps) => {
               })}
             </div>
             <DesktopMenu />
+            {session ? <ProfileMenu session={session} /> : <AuthDialogNavs />}
           </ul>
         </nav>
       </header>
@@ -81,7 +117,7 @@ const Header = ({ classname }: HeaderProps) => {
 
 export default Header;
 
-function NameLogo({}: {}) {
+function NameLogo() {
   return (
     <div className="">
       <Link
@@ -115,6 +151,64 @@ function DesktopMenu() {
           </Link>
         );
       })}
+      {/* <InstantSearch
+        searchClient={searchClient}
+        indexName="deals_index"
+        insights
+      >
+        <Configure hitsPerPage={5} />
+        <SearchBox />
+        <Hits hitComponent={Hit} />
+        <Pagination />
+      </InstantSearch> */}
     </div>
+  );
+}
+
+function Hit({ hit }: any) {
+  console.log("hit", hit);
+  return (
+    <article className="bg-red-300">
+      <h1>
+        <Highlight attribute="data.title" hit={hit} />
+      </h1>
+      <p>${hit.data.asking_price}</p>
+    </article>
+  );
+}
+
+function AuthDialogNavs() {
+  return (
+    <div className="hidden space-x-4 md:flex md:items-center">
+      <Link href={"/auth/login"}>Login</Link>
+    </div>
+  );
+}
+
+function ProfileMenu({ session }: { session: Session | null }) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger className="flex items-center gap-2">
+        <Avatar>
+          <AvatarImage
+            src={session?.user?.image || "https://github.com/shadcn.png"}
+            alt="@shadcn"
+          />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <span className="flex items-center font-medium text-baseC">
+          Account <ChevronDown />
+        </span>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        {/* <DropdownMenuItem asChild>
+          <Link href={`/profile/${session?.user?.id}`}>Profile</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>Billing</DropdownMenuItem>
+        <DropdownMenuItem>Subscription</DropdownMenuItem> */}
+        {/* <DropdownMenuSeparator /> */}
+        <DropdownMenuItem onClick={() => signOut()}>Logout</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

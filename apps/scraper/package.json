@@ -16,6 +16,7 @@
     "@repo/firebase-client": "*",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.21",
+    "algoliasearch": "^5.5.3",
     "cheerio": "^1.0.0",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
