@@ -30,7 +30,7 @@ export default auth((req) => {
 
     if (!isLoggedIn) {
       console.log("access denied for not logged in users");
-      return NextResponse.redirect(new URL("/auth-login", req.url));
+      return NextResponse.redirect(new URL("/auth/login", req.url));
     }
   }
 

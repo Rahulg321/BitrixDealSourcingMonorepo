@@ -11,7 +11,7 @@ export default function SigninWithGoogleForm() {
       }}
       className="flex items-center justify-center"
     >
-      <Button type="submit">
+      <Button type="submit" variant={"outline"}>
         Signin with Google <FcGoogle className="ml-2 h-4 w-4" />
       </Button>
     </form>
