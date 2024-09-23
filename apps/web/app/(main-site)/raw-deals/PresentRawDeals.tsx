@@ -16,7 +16,7 @@ const PresentRawDeals = ({
   deals: any;
 }) => {
   const [showTableView, setShowTableView] = useState(false);
-
+  console.log("deals", deals);
   const dataTableDeals: DataTableDeal[] = deals.map((e: any) => {
     return {
       id: e.id,
@@ -25,7 +25,7 @@ const PresentRawDeals = ({
       asking_price: e.data.asking_price,
       category: e.data.category,
       status: e.data.status,
-      location: e.data.location,
+      location: e.data.state,
       link: e.data.link,
     };
   });
