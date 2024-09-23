@@ -3,6 +3,7 @@ import React from "react";
 import DealCard from "../../components/DealCard";
 import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
 import path from "path";
+import PresentRawDeals from "./PresentRawDeals";
 
 const FetchingRawDeals = async ({
   revenueOrder,
@@ -29,26 +30,8 @@ const FetchingRawDeals = async ({
   fileContent = await fs.readFile(filePath, "utf-8");
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {deals.map((deal: any) => {
-        return (
-          <DealCard
-            key={deal.id}
-            id={deal.id}
-            title={deal.data.title}
-            category={deal.data.category}
-            under_contract={deal.data.under_contract}
-            revenue={deal.data.revenue}
-            link={deal.data.link}
-            asking_price={deal.data.asking_price}
-            listing_code={deal.data.listing_code}
-            main_content={deal.data.main_content}
-            state={deal.data.state}
-            fileContent={fileContent}
-            status={deal.data.status}
-          />
-        );
-      })}
+    <div>
+      <PresentRawDeals fileContent={fileContent} deals={deals} />
     </div>
   );
 };

@@ -28,9 +28,6 @@ const ScrapedDealsPage = async ({
     <section className="container block-space">
       <div>
         <FilterDealDialog />
-        <Button asChild>
-          <Link href={"/raw-deals/table-view"}>Table View</Link>
-        </Button>
         <h1 className="mb-4 text-center md:mb-6 lg:mb-8">Available Deals</h1>
         <Suspense
           fallback={

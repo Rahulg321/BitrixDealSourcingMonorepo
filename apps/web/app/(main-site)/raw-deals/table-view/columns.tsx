@@ -13,17 +13,22 @@ import {
   DropdownMenuTrigger,
 } from "@repo/ui/components/dropdown-menu";
 import { DataTableColumnHeader } from "./data-table-column-header";
+import { Badge } from "@repo/ui/components/badge";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export type Payment = {
+export type DataTableDeal = {
   id: string;
-  amount: number;
-  status: "pending" | "processing" | "success" | "failed";
-  email: string;
+  title: string;
+  revenue: string;
+  asking_price?: string;
+  category: string;
+  status?: "Rejected" | "Approved";
+  location: string;
+  link: string;
 };
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<DataTableDeal>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -47,26 +52,64 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "title",
+    header: "Title",
   },
   {
-    accessorKey: "email",
+    accessorKey: "revenue",
     header: ({ column }) => {
-      return <DataTableColumnHeader column={column} title="Email" />;
+      return <DataTableColumnHeader column={column} title="Revenue" />;
     },
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-right">Amount</div>,
+    accessorKey: "asking_price",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Asking Price" />;
+    },
+  },
+  {
+    accessorKey: "category",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Category" />;
+    },
+  },
+  {
+    accessorKey: "location",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Location" />;
+    },
+  },
+  {
+    accessorKey: "category",
+    header: ({ column }) => {
+      return <DataTableColumnHeader column={column} title="Category" />;
+    },
+  },
+  {
+    accessorKey: "status",
+    header: () => <div className="text-right">Status</div>,
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
+      const dealStatus = row.getValue("status");
 
-      return <div className="text-right font-medium">{formatted}</div>;
+      return (
+        <div className="text-right font-medium">
+          {dealStatus === "Approved" ? (
+            <div>
+              <Badge variant={"default"}>Approved</Badge>
+            </div>
+          ) : null}
+          {dealStatus === "Rejected" ? (
+            <div>
+              <Badge variant={"destructive"}>Rejected</Badge>
+            </div>
+          ) : null}
+          {!dealStatus ? (
+            <div>
+              <Badge variant={"secondary"}>Unchecked</Badge>
+            </div>
+          ) : null}
+        </div>
+      );
     },
   },
   {
@@ -87,11 +130,11 @@ export const columns: ColumnDef<Payment>[] = [
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(payment.id)}
             >
-              Copy payment ID
+              View Details
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
-            <DropdownMenuItem>View payment details</DropdownMenuItem>
+            <DropdownMenuItem>Edit Deal</DropdownMenuItem>
+            <DropdownMenuItem>Deal Link</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
