@@ -29,7 +29,11 @@ const EditDealPage = async ({ params }: { params: { uid: string } }) => {
     explanation,
   } = fetchedDeal;
 
-  const filePath = path.join(process.cwd(), "app/raw-deals", "DealScreen.txt"); // Adjust the path based on the location of your file
+  const filePath = path.join(
+    process.cwd(),
+    "app/(main-site)/raw-deals",
+    "DealScreen.txt"
+  ); // Adjust the path based on the location of your file
   let fileContent;
 
   fileContent = await fs.readFile(filePath, "utf-8");

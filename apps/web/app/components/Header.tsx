@@ -34,6 +34,7 @@ import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { Session } from "next-auth";
 import { ChevronDown } from "lucide-react";
 import { signOut } from "next-auth/react";
+import Search from "./search";
 
 const searchClient = algoliasearch(
   "KNMFQH2NOH",
@@ -107,7 +108,14 @@ const Header = ({ classname, session }: HeaderProps) => {
               })}
             </div>
             <DesktopMenu />
-            {session ? <ProfileMenu session={session} /> : <AuthDialogNavs />}
+            {session ? (
+              <div className="flex items-center gap-4">
+                {/* <Search placeholder="search deals..." /> */}
+                <ProfileMenu session={session} />
+              </div>
+            ) : (
+              <AuthDialogNavs />
+            )}
           </ul>
         </nav>
       </header>
@@ -186,6 +194,8 @@ function AuthDialogNavs() {
 }
 
 function ProfileMenu({ session }: { session: Session | null }) {
+  console.log("session in profile menu", session);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-2">

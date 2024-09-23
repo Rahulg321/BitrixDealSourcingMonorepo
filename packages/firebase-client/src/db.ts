@@ -1,4 +1,11 @@
-import { collection, addDoc, updateDoc, getDoc } from "firebase/firestore";
+import {
+  collection,
+  addDoc,
+  updateDoc,
+  getDoc,
+  orderBy,
+  where,
+} from "firebase/firestore";
 import { db } from "./init.js";
 import { getDocs, query, limit } from "firebase/firestore";
 import { doc, deleteDoc } from "firebase/firestore";
@@ -26,13 +33,40 @@ export async function getEntireCollection(collectionName: string) {
 
 export async function getDocumentsWithLimit(
   collectionName: string,
-  limitCount = 10
+  limitCount = 10,
+  revenueOrder: "asc" | "desc" = "desc",
+  searchQuery: string = "" // Add searchQuery parameter
 ) {
   try {
+    console.log("updated query");
     const collectionRef = collection(db, collectionName);
-    const q = query(collectionRef, limit(limitCount));
-    const querySnapshot = await getDocs(q);
 
+    let q;
+
+    if (searchQuery) {
+      // Search in title, category, revenue, and askingPrice
+      q = query(
+        collectionRef,
+        where("title", ">=", searchQuery),
+        where("title", "<=", searchQuery + "\uf8ff"), // Range query for partial matches on title
+        // where("category", ">=", searchQuery), // Range query for partial matches on category
+        // where("category", "<=", searchQuery + "\uf8ff"),
+        // where("revenue", ">=", searchQuery), // Range query for partial matches on revenue
+        // where("revenue", "<=", searchQuery + "\uf8ff"),
+        // where("askingPrice", ">=", searchQuery), // Range query for partial matches on askingPrice
+        // where("askingPrice", "<=", searchQuery + "\uf8ff"),
+        limit(limitCount)
+      );
+    } else {
+      // If no searchQuery, just order by revenue
+      q = query(
+        collectionRef,
+        orderBy("revenue", revenueOrder),
+        limit(limitCount)
+      );
+    }
+
+    const querySnapshot = await getDocs(q);
     const documents: any = [];
     querySnapshot.forEach((doc) => {
       documents.push({
@@ -47,6 +81,52 @@ export async function getDocumentsWithLimit(
     return [];
   }
 }
+
+// export async function getDocumentsWithLimit(
+//   collectionName: string,
+//   limitCount = 10,
+//   revenueOrder: "asc" | "desc" = "desc",
+//   searchQuery: string = "" // Add searchQuery parameter
+// ) {
+//   try {
+//     const collectionRef = collection(db, collectionName);
+
+//     let q;
+
+//     if (searchQuery) {
+//       // Use `where` to filter documents based on the searchQuery
+//       q = query(
+//         collectionRef,
+//         where("title", ">=", searchQuery), // Assuming `title` is a field in your deals collection
+//         where("title", "<=", searchQuery + "\uf8ff"), // Range query for partial matches
+//         orderBy("title"), // Ensure that you order by the field you are filtering by
+//         orderBy("revenue", revenueOrder),
+//         limit(limitCount)
+//       );
+//     } else {
+//       // If no searchQuery, just order by revenue
+//       q = query(
+//         collectionRef,
+//         orderBy("revenue", revenueOrder),
+//         limit(limitCount)
+//       );
+//     }
+
+//     const querySnapshot = await getDocs(q);
+//     const documents: any = [];
+//     querySnapshot.forEach((doc) => {
+//       documents.push({
+//         id: doc.id,
+//         data: doc.data(),
+//       });
+//     });
+
+//     return documents;
+//   } catch (error) {
+//     console.error("Error fetching documents: ", error);
+//     return [];
+//   }
+// }
 
 // Example usage:
 // const cities = await getDocumentsWithLimit(db, "cities", 5);
