@@ -4,12 +4,13 @@ import DealCard from "../../components/DealCard";
 
 import { Button } from "@repo/ui/components/button";
 import Link from "next/link";
-import { CaseUpper, Home } from "lucide-react";
+import { CaseUpper, Home, PlusCircle, PlusIcon } from "lucide-react";
 import FilterDealDialog from "../../components/dialogs/filter-deal-dialog";
 import FetchingRawDeals from "./FetchingRawDeals";
 import DealCardSkeleton from "../../components/skeletons/DealCardSkeleton";
 import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
 import path from "path";
+import BulkUploadDealsDialog from "../../components/dialogs/BulkUploadDealsDialog";
 
 const ScrapedDealsPage = async ({ searchParams }: { searchParams?: {} }) => {
   const filePath = path.join(
@@ -25,7 +26,10 @@ const ScrapedDealsPage = async ({ searchParams }: { searchParams?: {} }) => {
   return (
     <section className="container block-space">
       <div>
-        <FilterDealDialog />
+        <div className="flex gap-4 items-center">
+          <FilterDealDialog />
+          <BulkUploadDealsDialog />
+        </div>
         <h1 className="mb-4 text-center md:mb-6 lg:mb-8">Available Deals</h1>
         <Suspense
           fallback={

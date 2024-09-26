@@ -65,7 +65,7 @@ const FetchingRawDeals = ({ fileContent }: { fileContent: any }) => {
       <PresentRawDeals fileContent={fileContent} deals={data} />
 
       {/* Pagination controls */}
-      <div>
+      <div className="space-x-2 justify-end mt-4 w-full">
         <Button
           onClick={() => {
             showPrevious(data[0] as SnapshotDeal);

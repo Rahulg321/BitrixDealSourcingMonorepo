@@ -1,6 +1,7 @@
 "use server";
 
 import {
+  addToDb,
   deleteDealFromDatabase,
   editDealInDatabase,
   updateDealStatusFirebase,
@@ -10,6 +11,26 @@ import {
   dealSchema,
   DealSchemaZodType,
 } from "../components/forms/EditDealForm";
+import { NewDealSchemaZodType } from "../components/forms/CreateNewDealForm";
+
+export const addDealToFirebase = async (data: NewDealSchemaZodType) => {
+  try {
+    await addToDb("deals", data);
+
+    revalidatePath("/raw-deals");
+
+    return {
+      type: "success",
+      message: "Successfully edited deal from firebase",
+    };
+  } catch (error) {
+    console.error("an error occured adding deal to firebase", error);
+    return {
+      type: "error",
+      message: "Could not add deal to firebase",
+    };
+  }
+};
 
 export const editDealFromFirebase = async (
   dealId: string,
