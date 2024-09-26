@@ -5,10 +5,48 @@ import {
   getDoc,
   orderBy,
   where,
+  startAfter,
+  endBefore,
+  limitToLast,
+  serverTimestamp,
+  Timestamp,
+  DocumentSnapshot,
 } from "firebase/firestore";
 import { db } from "./init.js";
 import { getDocs, query, limit } from "firebase/firestore";
 import { doc, deleteDoc } from "firebase/firestore";
+
+export type RawDeal = {
+  asking_price: string; // e.g., "$15,500,000"
+  category: string; // e.g., "Pharmacy"
+  created_at: Timestamp; // Firestore Timestamp
+  link: string; // e.g., "https://americanhealthcarecapital.com/listing/xyrx1w/"
+  listing_code: string; // e.g., "XYRX1W"
+  main_content: string; // Full description text from the deal listing
+  revenue: string; // e.g., "$25,000,000"
+  scraped_by: string; // e.g., "Rahul Gupta"
+  state: string; // e.g., "Not Disclosed"
+  title: string; // e.g., "Highly Profitable Assisted Living & Group Home-LTC Pharmacy"
+  under_contract: string; // e.g., "Yes"
+  status?: "Approved" | "Rejected";
+};
+
+export type SnapshotDeal = {
+  id: string;
+
+  asking_price: string; // e.g., "$15,500,000"
+  category: string; // e.g., "Pharmacy"
+  created_at: Timestamp; // Firestore Timestamp
+  link: string; // e.g., "https://americanhealthcarecapital.com/listing/xyrx1w/"
+  listing_code: string; // e.g., "XYRX1W"
+  main_content: string; // Full description text from the deal listing
+  revenue: string; // e.g., "$25,000,000"
+  scraped_by: string; // e.g., "Rahul Gupta"
+  state: string; // e.g., "Not Disclosed"
+  title: string; // e.g., "Highly Profitable Assisted Living & Group Home-LTC Pharmacy"
+  under_contract: string; // e.g., "Yes"
+  status?: "Approved" | "Rejected";
+};
 
 export async function getEntireCollection(collectionName: string) {
   try {
@@ -31,40 +69,159 @@ export async function getEntireCollection(collectionName: string) {
   }
 }
 
+// export async function getDocumentsWithPagination(
+//   collectionName: string,
+//   cursor: any
+// ) {
+//   try {
+//     console.log("collection name:", collectionName);
+//     const collectionRef = collection(db, collectionName);
+//     let q = query(collectionRef, limit(2));
+
+//     if (cursor) {
+//       q = query(q, startAfter(cursor));
+//     }
+
+//     const querySnapshot = await getDocs(q);
+//     const documents: any[] = [];
+
+//     querySnapshot.forEach((doc) => {
+//       documents.push({
+//         id: doc.id,
+//         data: doc.data(),
+//       });
+//     });
+
+//     const lastVisible = querySnapshot.docs[querySnapshot.docs.length - 1];
+
+//     return {
+//       documents,
+//       lastVisible, // Return the last document for pagination purposes
+//     };
+//   } catch (error) {
+//     console.error("Error fetching documents: ", error);
+//     return {
+//       documents: [],
+//       lastVisible: null,
+//     };
+//   }
+// }
+type PaginationResult = {
+  documents: RawDeal[];
+};
+
+export async function fetchDocumentsWithPagination(
+  collectionName: string,
+  limitCount = 2,
+  order: "next" | "previous" = "next",
+  lastVisibleDoc?: any
+): Promise<SnapshotDeal[]> {
+  try {
+    const collectionRef = collection(db, collectionName);
+    console.log("lastVisibleDoc:", lastVisibleDoc);
+    let q;
+
+    if (order === "next" && lastVisibleDoc) {
+      q = query(
+        collectionRef,
+        orderBy("created_at", "desc"),
+        startAfter(lastVisibleDoc.created_at),
+        limit(limitCount)
+      );
+    } else if (order === "previous" && lastVisibleDoc) {
+      q = query(
+        collectionRef,
+        orderBy("created_at", "desc"),
+        endBefore(lastVisibleDoc.created_at),
+        limitToLast(limitCount)
+      );
+    } else {
+      q = query(
+        collectionRef,
+        orderBy("created_at", "desc"),
+        limit(limitCount)
+      );
+    }
+
+    const querySnapshot = await getDocs(q);
+    const documents: any = [];
+    querySnapshot.forEach((doc) => {
+      documents.push({
+        id: doc.id,
+        ...doc.data(),
+      });
+    });
+
+    return documents;
+  } catch (error) {
+    console.error("Error fetching documents: ", error);
+    return [];
+  }
+}
+// export async function fetchDocumentsWithPagination(
+//   collectionName: string,
+//   limitCount = 2,
+//   order: "next" | "previous" = "next",
+//   lastVisibleDoc?: any
+// ): Promise<PaginationResult> {
+//   try {
+//     const collectionRef = collection(db, collectionName);
+//     console.log("lastVisibleDoc:", lastVisibleDoc);
+//     let q;
+
+//     if (order === "next" && lastVisibleDoc) {
+//       q = query(
+//         collectionRef,
+//         orderBy("created_at", "desc"),
+//         startAfter(lastVisibleDoc),
+//         limit(limitCount)
+//       );
+//     } else if (order === "previous" && lastVisibleDoc) {
+//       q = query(
+//         collectionRef,
+//         orderBy("created_at", "desc"),
+//         endBefore(lastVisibleDoc),
+//         limitToLast(limitCount)
+//       );
+//     } else {
+//       q = query(
+//         collectionRef,
+//         orderBy("created_at", "desc"),
+//         limit(limitCount)
+//       );
+//     }
+
+//     const querySnapshot = await getDocs(q);
+//     const documents: any = [];
+//     querySnapshot.forEach((doc) => {
+//       documents.push({
+//         id: doc.id,
+//         data: doc.data(),
+//       });
+//     });
+
+//     return {
+//       documents,
+//       lastVisible:
+//         querySnapshot.docs.length > 0
+//           ? querySnapshot.docs[querySnapshot.docs.length - 1]
+//           : null,
+//     };
+//   } catch (error) {
+//     console.error("Error fetching documents: ", error);
+//     return { documents: [], lastVisible: null };
+//   }
+// }
+
 export async function getDocumentsWithLimit(
   collectionName: string,
-  limitCount = 10,
-  revenueOrder: "asc" | "desc" = "desc",
-  searchQuery: string = "" // Add searchQuery parameter
-) {
+  limitCount = 10
+): Promise<RawDeal[]> {
   try {
     console.log("updated query");
     const collectionRef = collection(db, collectionName);
 
-    let q;
-
-    if (searchQuery) {
-      // Search in title, category, revenue, and askingPrice
-      q = query(
-        collectionRef,
-        where("title", ">=", searchQuery),
-        where("title", "<=", searchQuery + "\uf8ff"), // Range query for partial matches on title
-        // where("category", ">=", searchQuery), // Range query for partial matches on category
-        // where("category", "<=", searchQuery + "\uf8ff"),
-        // where("revenue", ">=", searchQuery), // Range query for partial matches on revenue
-        // where("revenue", "<=", searchQuery + "\uf8ff"),
-        // where("askingPrice", ">=", searchQuery), // Range query for partial matches on askingPrice
-        // where("askingPrice", "<=", searchQuery + "\uf8ff"),
-        limit(limitCount)
-      );
-    } else {
-      // If no searchQuery, just order by revenue
-      q = query(
-        collectionRef,
-        orderBy("revenue", revenueOrder),
-        limit(limitCount)
-      );
-    }
+    let q = query(collectionRef, limit(limitCount));
 
     const querySnapshot = await getDocs(q);
     const documents: any = [];
@@ -137,6 +294,8 @@ export const addToDb = async (collectionName: string, data: any) => {
     // collectionName is dynamic, so it can be "deals" or any other collection
     const docRef = await addDoc(collection(db, collectionName), {
       ...data, // Spread the dynamic data into the document
+      created_at: serverTimestamp(),
+      scraped_by: "Rahul Gupta",
     });
     console.log("Document written with ID: ", docRef.id);
   } catch (e) {

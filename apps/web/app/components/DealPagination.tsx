@@ -11,19 +11,18 @@ import {
   PaginationPrevious,
 } from "@repo/ui/components/pagination";
 
-const DealPagination = () => {
+const DealPagination = ({ lastVisible }: { lastVisible: string }) => {
+  const onHandlePrevious = () => {};
+
+  const onHandleNext = () => {};
+
   return (
     <Pagination>
       <PaginationContent>
         <PaginationItem>
           <PaginationPrevious href="#" />
         </PaginationItem>
-        <PaginationItem>
-          <PaginationLink href="#">1</PaginationLink>
-        </PaginationItem>
-        <PaginationItem>
-          <PaginationEllipsis />
-        </PaginationItem>
+
         <PaginationItem>
           <PaginationNext href="#" />
         </PaginationItem>

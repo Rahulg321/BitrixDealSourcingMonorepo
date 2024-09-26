@@ -8,21 +8,19 @@ import { CaseUpper, Home } from "lucide-react";
 import FilterDealDialog from "../../components/dialogs/filter-deal-dialog";
 import FetchingRawDeals from "./FetchingRawDeals";
 import DealCardSkeleton from "../../components/skeletons/DealCardSkeleton";
+import * as fs from "fs/promises"; // Importing fs.promises to use the async methods
+import path from "path";
 
-const ScrapedDealsPage = async ({
-  searchParams,
-}: {
-  searchParams?: {
-    revenueOrder?: "asc" | "desc" | undefined;
-    query?: string;
-    dateOrder?: string;
-    page?: string;
-  };
-}) => {
-  const query = searchParams?.query || "";
-  const revenueOrder = searchParams?.revenueOrder || "asc";
-  const dateOrder = searchParams?.dateOrder || "asc";
-  const currentPage = Number(searchParams?.page) || 1;
+const ScrapedDealsPage = async ({ searchParams }: { searchParams?: {} }) => {
+  const filePath = path.join(
+    process.cwd(),
+    "app/(main-site)/raw-deals",
+    "DealScreen.txt"
+  );
+
+  let fileContent;
+
+  fileContent = await fs.readFile(filePath, "utf-8");
 
   return (
     <section className="container block-space">
@@ -41,7 +39,7 @@ const ScrapedDealsPage = async ({
             </div>
           }
         >
-          <FetchingRawDeals revenueOrder={revenueOrder} searchQuery={query} />
+          <FetchingRawDeals fileContent={fileContent} />
         </Suspense>
       </div>
     </section>
