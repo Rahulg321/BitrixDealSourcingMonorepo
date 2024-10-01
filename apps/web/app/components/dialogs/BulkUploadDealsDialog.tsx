@@ -13,6 +13,7 @@ import { PlusSquare, Upload } from "lucide-react";
 import { Button } from "@repo/ui/components/button";
 
 import { useToast } from "@repo/ui/hooks/use-toast";
+import BulkImportDealsButton from "../forms/BulkImportDealsButton";
 
 const BulkUploadDealsDialog = () => {
   const [isPending, startTransition] = useTransition();
@@ -23,7 +24,7 @@ const BulkUploadDealsDialog = () => {
       <DialogTrigger asChild>
         <Button>
           <Upload className="h-4 w-4 mr-2" />
-          Bulk Upload Questions
+          Bulk Upload Deals
         </Button>
       </DialogTrigger>
       <DialogContent>
@@ -35,8 +36,7 @@ const BulkUploadDealsDialog = () => {
             </DialogDescription>
           </DialogHeader>
           <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            <BulkImportDealsButton />
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

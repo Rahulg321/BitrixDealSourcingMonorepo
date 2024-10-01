@@ -2,6 +2,7 @@ import React from "react";
 import CreateNewDealForm from "../../../components/forms/CreateNewDealForm";
 import { Button } from "@repo/ui/components/button";
 import BulkImportDealsButton from "../../../components/forms/BulkImportDealsButton";
+import BulkUploadDealsDialog from "../../../components/dialogs/BulkUploadDealsDialog";
 
 const NewDealPage = () => {
   return (
@@ -27,7 +28,7 @@ const NewDealPage = () => {
             bulk upload
           </p>
           <div className="flex justify-center">
-            <BulkImportDealsButton />
+            <BulkUploadDealsDialog />
           </div>
         </div>
         <CreateNewDealForm />

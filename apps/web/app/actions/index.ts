@@ -15,6 +15,7 @@ import { NewDealSchemaZodType } from "../components/forms/CreateNewDealForm";
 
 export const addDealToFirebase = async (data: NewDealSchemaZodType) => {
   try {
+    console.log("data in server is", data);
     await addToDb("deals", data);
 
     revalidatePath("/raw-deals");

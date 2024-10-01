@@ -35,7 +35,7 @@ export const newDealSchema = z.object({
   under_contract: z.string().optional(),
   revenue: z.string().optional(),
   status: z.enum(["Approved", "Rejected"]).optional(),
-  link: z.string().url("Invalid URL").optional(),
+  link: z.string().optional(),
   asking_price: z.string().optional(),
   listing_code: z.string().optional(),
   state: z.string().min(1, "State is required"),
@@ -72,7 +72,7 @@ const CreateNewDealForm = () => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     startTransition(async () => {
-      console.log(values);
+      console.log("values", values);
       const response = await addDealToFirebase(values);
       console.log("response after adding", response);
       if (response.type === "success") {
@@ -249,7 +249,7 @@ const CreateNewDealForm = () => {
         />
         <Button type="submit" className="w-full" disabled={isPending}>
           {isPending ? (
-            "Editing....."
+            "Adding....."
           ) : (
             <div className="flex items-center">
               <PenIcon className="h-4 w-4 mr-2" />
