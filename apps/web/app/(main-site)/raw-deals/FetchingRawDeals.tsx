@@ -17,7 +17,7 @@ const FetchingRawDeals = ({ fileContent }: { fileContent: any }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const documents = await fetchDocumentsWithPagination("deals", 20);
+      const documents = await fetchDocumentsWithPagination("deals", 35);
       console.log("fetchedDeals", documents);
       setData(documents);
       setIsNextAvailable(documents.length >= 3);
@@ -31,7 +31,7 @@ const FetchingRawDeals = ({ fileContent }: { fileContent: any }) => {
     } else {
       const nextItems = await fetchDocumentsWithPagination(
         "deals",
-        20,
+        35,
         "next",
         item
       );
@@ -47,7 +47,7 @@ const FetchingRawDeals = ({ fileContent }: { fileContent: any }) => {
   const showPrevious = async (item: SnapshotDeal) => {
     const previousItems = await fetchDocumentsWithPagination(
       "deals",
-      20,
+      35,
       "previous",
       item
     );
