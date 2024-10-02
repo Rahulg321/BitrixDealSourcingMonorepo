@@ -106,13 +106,14 @@ export async function getEntireCollection(collectionName: string) {
 //     };
 //   }
 // }
+
 type PaginationResult = {
   documents: RawDeal[];
 };
 
 export async function fetchDocumentsWithPagination(
   collectionName: string,
-  limitCount = 2,
+  limitCount = 15,
   order: "next" | "previous" = "next",
   lastVisibleDoc?: any
 ): Promise<SnapshotDeal[]> {
