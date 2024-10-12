@@ -14,6 +14,7 @@ import { Button } from "@repo/ui/components/button";
 import { Badge } from "@repo/ui/components/badge";
 import {
   Check,
+  CloudHailIcon,
   CreditCard,
   Cross,
   DollarSignIcon,
@@ -31,17 +32,22 @@ import Link from "next/link";
 import ScreenDealDialog from "./dialogs/ScreenDealDialog";
 import { mainModule } from "process";
 import PublishBitrixDialog from "./dialogs/PublishBitrixDialog";
+import { MdMoney } from "react-icons/md";
 
 export type DealCardProps = {
   id: string;
   title: string;
-  under_contract: string;
-  revenue: string;
+  under_contract?: string;
+  revenue?: string;
   link?: string;
+  cashFlow?: string;
   asking_price?: string;
   listing_code?: string;
+  description?: string;
   state?: string;
-  category: string;
+  location?: string;
+  category?: string;
+  source: string;
   main_content: string;
   fileContent: any;
   status?: "Approved" | "Rejected";
@@ -53,10 +59,14 @@ const DealCard = ({
   under_contract,
   revenue,
   link,
+  cashFlow,
+  description,
   asking_price,
   listing_code,
   state,
+  location,
   category,
+  source,
   fileContent,
   main_content,
   status,
@@ -120,10 +130,17 @@ const DealCard = ({
             <span className="ml-2">{revenue}</span>
           </div>
           <div className="flex items-center">
-            <Handshake className="mr-2 h-4 w-4" />
-            <span className="font-medium">Under Contract:</span>
-            <span className="ml-2">{under_contract}</span>
+            <CloudHailIcon className="mr-2 h-4 w-4" />
+            <span className="font-medium">Source:</span>
+            <span className="ml-2">{source}</span>
           </div>
+          {under_contract && (
+            <div className="flex items-center">
+              <Handshake className="mr-2 h-4 w-4" />
+              <span className="font-medium">Under Contract:</span>
+              <span className="ml-2">{under_contract}</span>
+            </div>
+          )}
           {listing_code && (
             <div className="flex items-center">
               <Hash className="mr-2 h-4 w-4" />
@@ -134,8 +151,22 @@ const DealCard = ({
           {state && (
             <div className="flex items-center ">
               <MapPinIcon className="mr-2 h-4 w-4" />
-              <span className="font-medium">Location:</span>
+              <span className="font-medium">State:</span>
               <span className="ml-2">{state}</span>
+            </div>
+          )}
+          {location && (
+            <div className="flex items-center ">
+              <MapPinIcon className="mr-2 h-4 w-4" />
+              <span className="font-medium">Location:</span>
+              <span className="ml-2">{location}</span>
+            </div>
+          )}
+          {cashFlow && (
+            <div className="flex items-center ">
+              <MdMoney className="mr-2 h-4 w-4" />
+              <span className="font-medium">Cashflow:</span>
+              <span className="ml-2">{cashFlow}</span>
             </div>
           )}
           {asking_price && (
@@ -185,6 +216,9 @@ const DealCard = ({
           category={category}
           fileContent={fileContent}
           main_content={main_content}
+          status={status}
+          source={source}
+          description={description}
         />
       </CardFooter>
     </Card>

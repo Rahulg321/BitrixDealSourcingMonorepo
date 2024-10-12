@@ -55,6 +55,7 @@ const EditDealForm = ({
   asking_price,
   listing_code,
   state,
+  source,
   category,
   main_content,
   fileContent,

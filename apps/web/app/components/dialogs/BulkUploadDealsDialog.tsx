@@ -19,6 +19,7 @@ const BulkUploadDealsDialog = () => {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
   const [openDialog, setOpenDialog] = useState(false);
+
   return (
     <Dialog open={openDialog} onOpenChange={setOpenDialog}>
       <DialogTrigger asChild>

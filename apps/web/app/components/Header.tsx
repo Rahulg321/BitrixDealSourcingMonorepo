@@ -30,16 +30,16 @@ import {
   Configure,
 } from "react-instantsearch";
 
-import { liteClient as algoliasearch } from "algoliasearch/lite";
+// import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { Session } from "next-auth";
 import { ChevronDown } from "lucide-react";
 import { signOut } from "next-auth/react";
-import Search from "./search";
+// import Search from "./search";
 
-const searchClient = algoliasearch(
-  "KNMFQH2NOH",
-  "4ad9f0c208468e716a2cce1f1ad148fb"
-);
+// const searchClient = algoliasearch(
+//   "KNMFQH2NOH",
+//   "4ad9f0c208468e716a2cce1f1ad148fb"
+// );
 
 type HeaderProps = {
   session: Session | null;
@@ -173,17 +173,17 @@ function DesktopMenu() {
   );
 }
 
-function Hit({ hit }: any) {
-  console.log("hit", hit);
-  return (
-    <article className="bg-red-300">
-      <h1>
-        <Highlight attribute="data.title" hit={hit} />
-      </h1>
-      <p>${hit.data.asking_price}</p>
-    </article>
-  );
-}
+// function Hit({ hit }: any) {
+//   console.log("hit", hit);
+//   return (
+//     <article className="bg-red-300">
+//       <h1>
+//         <Highlight attribute="data.title" hit={hit} />
+//       </h1>
+//       <p>${hit.data.asking_price}</p>
+//     </article>
+//   );
+// }
 
 function AuthDialogNavs() {
   return (

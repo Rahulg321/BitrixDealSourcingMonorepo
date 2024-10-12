@@ -4,7 +4,7 @@ import { z } from "zod";
 import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-
+import * as XLSX from "xlsx";
 import { Button } from "@repo/ui/components/button";
 import {
   Form,
@@ -38,41 +38,63 @@ const BulkImportDealsButton = () => {
 
   function onSubmit(values: z.infer<typeof bulkUploadSchema>) {
     startTransition(async () => {
-      console.log("type safe and validated");
       const file = values.deals;
-      console.log("file is", file);
 
       if (file) {
         const reader = new FileReader();
 
         reader.onload = async (event) => {
-          const text = event.target?.result;
-          console.log("text is", text);
-          if (typeof text === "string") {
-            // Parse the CSV file using PapaParse
-            const parsedData = Papa.parse(text, { header: true });
+          const fileExtension = file.name.split(".").pop();
+          await new Promise((resolve) => setTimeout(resolve, 10000));
+
+          if (
+            typeof event.target?.result === "string" &&
+            fileExtension === "csv"
+          ) {
+            // Parse CSV files
+            const parsedData = Papa.parse(event.target.result, {
+              header: true,
+            });
 
             console.log("Parsed CSV Data:", parsedData.data.slice(0, 5));
-            // const response = await bulkUploadQuestionsFromCSV(
-            //   examId,
-            //   parsedData.data as BaseQuestion[]
-            // );
+          } else if (fileExtension === "xlsx") {
+            const data = event.target?.result;
+            const workbook = XLSX.read(data, { type: "binary" });
+            // Extract the first sheet from the workbook
+            const firstSheetName = workbook.SheetNames[0];
 
-            // if (response.success) {
-            //   toast({
-            //     variant: "success",
-            //     title: "Successfully Uploaded Questions 🎉",
-            //     description: response.success,
-            //   });
-            // }
+            if (!firstSheetName) {
+              return;
+            }
 
-            // if (response.error) {
-            //   toast({
-            //     variant: "destructive",
-            //     title: "Uh oh! Something went wrong. ❌",
-            //     description: response.error,
-            //   });
-            // }
+            const worksheet = workbook.Sheets[firstSheetName];
+
+            // Convert the worksheet data to JSON
+            const jsonData = XLSX.utils.sheet_to_json(
+              worksheet as XLSX.WorkSheet,
+              { header: 1 }
+            );
+
+            // If you want to extract columns individually, you can do this:
+            const columns = jsonData[0]; // Assuming first row contains column headers
+            const rows = jsonData.slice(1); // Remaining rows are the actual data
+
+            console.log("Columns:", columns);
+            console.log("Rows:", rows[0]);
+            const mappedData = rows.map((row) => {
+              const rowObject = {};
+              columns.forEach((col, index) => {
+                rowObject[col] = row[index] || null; // Handle cases where data might be missing
+              });
+              return rowObject;
+            });
+
+            console.log("total rows are", mappedData.length);
+
+            console.log(
+              "Mapped Data (Columns with corresponding Rows):",
+              mappedData[0]
+            );
           }
         };
 
@@ -80,7 +102,18 @@ const BulkImportDealsButton = () => {
           console.error("Error reading file:", error);
         };
 
-        reader.readAsText(file);
+        // Handle both CSV and XLSX by using the appropriate method
+        if (file.name.endsWith(".csv")) {
+          reader.readAsText(file);
+        } else if (file.name.endsWith(".xlsx")) {
+          reader.readAsArrayBuffer(file);
+        } else {
+          toast({
+            variant: "destructive",
+            title: "Unsupported file type",
+            description: "Please upload a valid CSV or XLSX file.",
+          });
+        }
       }
     });
   }

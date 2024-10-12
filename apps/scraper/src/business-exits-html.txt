@@ -1,0 +1,855 @@
+<body class="page-template-default page page-id-13887 theme-sway woocommerce-js loading-effect wpb-js-composer js-comp-ver-7.0 vc_responsive">
+      
+  <nav class="navbar navbar-default navbar-fixed-top btn-hover-2 logo-left with-topbar with-topbar-mobile nav-transparent-secondary-logo navbar-shrink">
+              
+  	<div class="topbar tb-default-design visible-on-mobile">
+		<div class="container">
+			<div class="topbar-left-content ">
+								<div class="topbar-contact"><span class="topbar-phone"><a href="tel:213-457-7948"><i class="sway-phone-topbar fas"></i><span>213-457-7948</span></a></span><span class="topbar-email"><a href="mailto:hello@businessexits.com"><i class="sway-mail-topbar far"></i><span>hello@businessexits.com</span></a></span></div>							</div>
+			<div class="topbar-right-content ">
+								<div class="topbar-socials"><ul class="redux-social-media-list clearfix"></ul></div>							</div>
+		</div>
+	</div>
+          
+    
+    <div class="menubar main-nav-right">
+      <div class="container">
+       <div id="logo">
+                                              <a class="logo" href="https://businessexits.com">
+                                <img class="fixed-logo" src="https://businessexits.com/wp-content/uploads/2022/04/businessexitslogo-removebg-preview.png" width="200" alt="Business Exits">
+
+                                    <img class="nav-logo" src="https://businessexits.com/wp-content/uploads/2022/06/Trans_Logo.png" width="200" alt="Business Exits">
+                 
+                            </a>
+                                    </div>
+       <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+
+                
+                <div class="mobile-cart">
+                                  </div>
+                        </div>
+                  <div id="main-menu" class="collapse navbar-collapse background-dropdown-effect" aria-expanded="false">
+             <ul id="menu-nav" class="nav navbar-nav"><li id="menu-item-14506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14506 dropdown"><a href="https://businessexits.com/about/">About</a>
+<ul role="menu" class="dropdown-menu">
+	<li id="menu-item-14540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14540"><a href="https://businessexits.com/about/">About Us</a></li>
+	<li id="menu-item-14528" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14528"><a href="https://businessexits.com/testimonials/">Testimonials</a></li>
+	<li id="menu-item-14536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14536"><a href="https://businessexits.com/contact/">Contact</a></li>
+	<li id="menu-item-15431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15431"><a href="https://businessexits.com/blog/">Blog</a></li>
+</ul>
+<span class="mobile-dropdown"></span></li>
+<li id="menu-item-14530" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-13887 current_page_item menu-item-14530 active"><a href="https://businessexits.com/listings/">Listings</a></li>
+<li id="menu-item-14509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14509"><a href="https://businessexits.com/listings-sold/">Closed Deals</a></li>
+<li id="menu-item-14588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14588"><a href="https://businessexits.com/how-it-works/">How it Works</a></li>
+</ul>          </div>
+          <div class="main-nav-extra-content">
+            <div class="search-cart-wrapper">
+                          </div>
+                          <div class="header-bttn-wrapper">
+                                    
+     <a class="modal-menu-item tt_button tt_primary_button btn_primary_color hover_solid_secondary " target="_self" href="https://businessexits.com/page-y/?aid=hp">Sell Your Business</a>
+                </div>
+                      </div>
+                </div>
+     </div>
+  </nav>
+
+   <div id="wrapper" class=" hide-title-section no-mobile-animation btn-hover-2" style="margin-bottom: 487.8px;">
+   
+  
+<div id="primary" class="content-area" style="padding-bottom:0px;">
+	<main id="main" class="site-main">
+
+		
+
+<section id="single-page" class="section listings" style="">
+    <div class="container">
+						<div class="row single-page-content">
+											<section class="wpb-content-wrapper"><div data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid intro-section vc_custom_1656960518130 vc_custom_1656960518131 vc_row-has-fill vc_row-has-padding-top vc_row-has-padding-bottom vc_row-fixed-bg vc_row-bg-position-top vc_row-waves-sep" style="position: relative; left: -139.6px; box-sizing: border-box; width: 1519px; max-width: 1519px; padding-left: 139.6px; padding-right: 139.4px;"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-bg-position-top"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><header class="kd-section-title col-lg-12 text-center subtitle-below-title kd-animated fadeIn vc_custom_1656960423018 kd-animate" data-animation-delay="200"><h1 class="separator_off" style="color: #1e266d;font-size: 72px;line-height: 80px;margin-bottom:30px;">Businesses for Sale</h1><h6 class="subtitle" style="color: #1e266d;">Register for Updates on Businesses for Sale</h6></header></div></div></div></div><div class="vc_row wpb_row vc_inner vc_row-fluid vc_row-bg-position-top"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner hide-on-mobile"><div class="wpb_wrapper"></div></div></div><div class="inline-form-elems wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner vc_custom_1657250576013 vc_custom_1657250576013 vc_custom_1657250576014 vc_custom_1657250576014"><div class="wpb_wrapper">
+                <div class="gf_browser_chrome gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework" data-form-theme="legacy" data-form-index="0" id="gform_wrapper_10"><div id="gf_10" class="gform_anchor" tabindex="-1"></div><form method="post" enctype="multipart/form-data" target="gform_ajax_frame_10" id="gform_10" action="/listings/#gf_10" data-formid="10">
+                        <div class="gform-body gform_body"><ul id="gform_fields_10" class="gform_fields top_label form_sublabel_below description_below"><li id="field_10_1" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below hidden_label gfield_visibility_visible" data-js-reload="field_10_1"><label class="gfield_label gform-field-label" for="input_10_1">Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_email">
+                            <input name="input_1" id="input_10_1" type="text" value="" class="medium" placeholder="Enter your email address" aria-required="true" aria-invalid="false">
+                        </div></li></ul></div>
+        <div class="gform_footer top_label"> <input type="submit" id="gform_submit_button_10" class="gform_button button" value="Notify me!" onclick="if(window[&quot;gf_submitting_10&quot;]){return false;}  window[&quot;gf_submitting_10&quot;]=true;  " onkeypress="if( event.keyCode == 13 ){ if(window[&quot;gf_submitting_10&quot;]){return false;} window[&quot;gf_submitting_10&quot;]=true;  jQuery(&quot;#gform_10&quot;).trigger(&quot;submit&quot;,[true]); }"> <input type="hidden" name="gform_ajax" value="form_id=10&amp;title=&amp;description=&amp;tabindex=0&amp;theme=data-form-theme='legacy'">
+            <input type="hidden" class="gform_hidden" name="is_submit_10" value="1">
+            <input type="hidden" class="gform_hidden" name="gform_submit" value="10">
+            
+            <input type="hidden" class="gform_hidden" name="gform_unique_id" value="">
+            <input type="hidden" class="gform_hidden" name="state_10" value="WyJbXSIsIjY1ODc5YjcwYTVkNzQ5ZDAwMzFjZWMwNWZlNzNiNmEwIl0=">
+            <input type="hidden" class="gform_hidden" name="gform_target_page_number_10" id="gform_target_page_number_10" value="0">
+            <input type="hidden" class="gform_hidden" name="gform_source_page_number_10" id="gform_source_page_number_10" value="1">
+            <input type="hidden" name="gform_field_values" value="">
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style="display:none;width:0px;height:0px;" src="about:blank" name="gform_ajax_frame_10" id="gform_ajax_frame_10" title="This iframe contains the logic required to handle Ajax powered Gravity Forms."></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 10, 'https://businessexits.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_10').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_10');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_10').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_10').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_10').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_10').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_10').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_10').val();gformInitSpinner( 10, 'https://businessexits.com/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [10, current_page]);window['gf_submitting_10'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}setTimeout(function(){jQuery('#gform_wrapper_10').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_10').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [10]);window['gf_submitting_10'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_10').text());}, 50);}else{jQuery('#gform_10').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger('gform_post_render', [10, current_page]);gform.utils.trigger({ event: 'gform/postRender', native: false, data: { formId: 10, currentPage: current_page } });} );} );
+</script>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner hide-on-mobile"><div class="wpb_wrapper"></div></div></div></div></div></div></div><div class="kd-row-separator kd-row-separator-bottom separator-height-large"><svg class="separator-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+			<defs>
+			<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+			</defs>
+			<g class="separator-waves-parallax">
+			<use xlink:href="#gentle-wave" x="48" y="0" fill="#fff" style="opacity:0.7;"></use>
+			<use xlink:href="#gentle-wave" x="48" y="3" fill="#fff" style="opacity:0.5;"></use>
+			<use xlink:href="#gentle-wave" x="48" y="5" fill="#fff" style="opacity:0.3;"></use>
+			<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
+			</g>
+			</svg></div><div class="kd-row-separator-clear"></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="listings-row" class="vc_row wpb_row vc_row-fluid vc_row-bg-position-top"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<form autocomplete="off" name="wpv-filter-14338" action="/listings/?wpv_view_count=14338" method="get" class="wpv-filter-form js-wpv-filter-form js-wpv-filter-form-14338 js-wpv-form-full js-wpv-dps-enabled js-wpv-ajax-results-enabled" data-viewnumber="14338" data-viewid="14338" data-viewhash="eyJuYW1lIjoiY3VycmVudC1saXN0aW5ncyJ9" data-viewwidgetid="0" data-orderby="" data-order="" data-orderbyas="" data-orderbysecond="" data-ordersecond="" data-parametric="{&quot;query&quot;:&quot;normal&quot;,&quot;id&quot;:&quot;14338&quot;,&quot;view_id&quot;:&quot;14338&quot;,&quot;widget_id&quot;:0,&quot;view_hash&quot;:&quot;14338&quot;,&quot;action&quot;:&quot;\/listings\/?wpv_view_count=14338&quot;,&quot;sort&quot;:{&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;orderby_as&quot;:&quot;&quot;,&quot;orderby_second&quot;:&quot;&quot;,&quot;order_second&quot;:&quot;&quot;},&quot;orderby&quot;:&quot;&quot;,&quot;order&quot;:&quot;&quot;,&quot;orderby_as&quot;:&quot;&quot;,&quot;orderby_second&quot;:&quot;&quot;,&quot;order_second&quot;:&quot;&quot;,&quot;ajax_form&quot;:&quot;&quot;,&quot;ajax_results&quot;:&quot;&quot;,&quot;effect&quot;:&quot;fade&quot;,&quot;prebefore&quot;:&quot;&quot;,&quot;before&quot;:&quot;&quot;,&quot;after&quot;:&quot;&quot;,&quot;attributes&quot;:[],&quot;environment&quot;:{&quot;current_post_id&quot;:13887,&quot;parent_post_id&quot;:13887,&quot;parent_term_id&quot;:0,&quot;parent_user_id&quot;:0,&quot;archive&quot;:{&quot;type&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;data&quot;:[]}},&quot;loop&quot;:{&quot;type&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;data&quot;:[],&quot;id&quot;:0}}" data-attributes="[]" data-environment="{&quot;current_post_id&quot;:13887,&quot;parent_post_id&quot;:13887,&quot;parent_term_id&quot;:0,&quot;parent_user_id&quot;:0,&quot;archive&quot;:{&quot;type&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;data&quot;:[]}}"><input type="hidden" class="js-wpv-dps-filter-data js-wpv-filter-data-for-this-form" data-action="/listings/?wpv_view_count=14338" data-page="1" data-ajax="enable" data-effect="fade" data-maxpages="2" data-ajaxprebefore="" data-ajaxbefore="" data-ajaxafter=""><input class="wpv_view_count wpv_view_count-14338" type="hidden" name="wpv_view_count" value="14338">
+
+<select name="wpv_sort_orderby" class="wpv-sort-control-select wpv-sort-control-orderby js-wpv-sort-control-orderby" data-viewnumber="14338" autocomplete="off"><option value="field-sorting_price" selected="selected" data-orderbyas="numeric" data-forceorder="desc">Price</option><option value="field-sorting_revenue" data-orderbyas="numeric" data-forceorder="desc">Revenue</option></select><select name="wpv_sort_order" class="wpv-sort-control-select wpv-sort-control-order js-wpv-sort-control-order" data-viewnumber="14338" data-labels="{&quot;default&quot;:{&quot;asc&quot;:&quot;Ascending&quot;,&quot;desc&quot;:&quot;Descending&quot;},&quot;field-sorting_price&quot;:{&quot;asc&quot;:&quot;Low to High&quot;,&quot;desc&quot;:&quot;High to Low&quot;},&quot;field-sorting_revenue&quot;:{&quot;asc&quot;:&quot;Low to High&quot;,&quot;desc&quot;:&quot;High to Low&quot;}}" autocomplete="off"><option value="desc" selected="selected">High to Low</option><option value="asc">Low to High</option></select><select name="listing_type" class="wpv-sort-control-select type_select js-wpv-filter-trigger form-control"><option selected="selected" value="0">All Types</option><option value="construction-2">Construction</option><option value="ecommerce">Ecommerce</option><option value="manufacturing">Manufacturing</option><option value="marketing-consulting">Marketing &amp; Consulting</option><option value="retail">Retail</option><option value="service">Service</option><option value="software-saas">Software/SaaS</option><option value="wholesale-distribution">Wholesale/Distribution</option></select>
+ 
+</form>
+<span style="display:none" class="js-wpv-dps-spinner"><img decoding="async" src="https://businessexits.com/wp-content/plugins/wp-views/embedded/res/img/ajax-loader2.svg"></span>
+
+<div id="wpv-view-layout-14338" class="js-wpv-view-layout js-wpv-layout-responsive js-wpv-view-layout-14338 wpv-pagination js-wpv-layout-has-pagination wpv-pagination-preload-images js-wpv-layout-preload-images wpv-pagination-preload-pages js-wpv-layout-preload-pages" style="visibility: visible;" data-viewnumber="14338" data-pagination="{&quot;id&quot;:&quot;14338&quot;,&quot;query&quot;:&quot;normal&quot;,&quot;type&quot;:&quot;ajaxed&quot;,&quot;effect&quot;:&quot;fade&quot;,&quot;duration&quot;:500,&quot;speed&quot;:5,&quot;pause_on_hover&quot;:&quot;enabled&quot;,&quot;stop_rollover&quot;:&quot;false&quot;,&quot;cache_pages&quot;:&quot;enabled&quot;,&quot;preload_images&quot;:&quot;enabled&quot;,&quot;preload_pages&quot;:&quot;enabled&quot;,&quot;preload_reach&quot;:1,&quot;spinner&quot;:&quot;builtin&quot;,&quot;spinner_image&quot;:&quot;https://businessexits.com/wp-content/plugins/wp-views/embedded/res/img/ajax-loader.svg&quot;,&quot;callback_next&quot;:&quot;&quot;,&quot;manage_history&quot;:&quot;enabled&quot;,&quot;has_controls_in_form&quot;:&quot;disabled&quot;,&quot;infinite_tolerance&quot;:0,&quot;max_pages&quot;:2,&quot;page&quot;:1,&quot;base_permalink&quot;:&quot;/listings/?wpv_view_count=14338&amp;wpv_paged=WPV_PAGE_NUM&quot;,&quot;loop&quot;:{&quot;type&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;data&quot;:[],&quot;id&quot;:0}}" data-permalink="/listings/?wpv_view_count=14338">
+
+	
+	
+	
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/information_security_firm_sa/">
+<div class="key-listings ">
+<div class="listing_image"><img fetchpriority="high" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/05/pexels-tima-miroshnichenko-5380792-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/05/pexels-tima-miroshnichenko-5380792-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/05/pexels-tima-miroshnichenko-5380792-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Leading Information Security Firm – Strong Growth Potential (📍Saudi Arabia)</div>
+<div class="listing_price">Listing Price: Open to Offers</div>
+<div class="listing_revenue">Revenue: $11,212,916</div>
+<div class="listing_income">Income: $5,179,543</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Marketing &amp; Consulting, Software/SaaS</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/emergency_plumbing_southeast/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/04/tap-791172_1280-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/04/tap-791172_1280-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/04/tap-791172_1280-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Emergency Plumbing Business in Southeast</div>
+<div class="listing_price">Listing Price: $18,000,000-$22,000,000</div>
+<div class="listing_revenue">Revenue: $12,000,000 (2024 Projection)</div>
+<div class="listing_income">Income: $3,960,000 (2024 Projection)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/dod_electrical_contractor/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/03/pexels-gunshe-ramchandani-5615117-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/03/pexels-gunshe-ramchandani-5615117-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/03/pexels-gunshe-ramchandani-5615117-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Department of Defense Electrical Prime Contractor</div>
+<div class="listing_price">Listing Price: $16,000,000</div>
+<div class="listing_revenue">Revenue: $22,000,000 (2024 Projection)</div>
+<div class="listing_income">Income: $4,200,000 (2024 Projection)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Construction, Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/b2b_experiential_marketing/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/06/eventexpmarketingopt1-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/06/eventexpmarketingopt1-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/06/eventexpmarketingopt1-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">B2B Experiential Marketing Vendor</div>
+<div class="listing_price">Listing Price: $16,000,000 to $20,000,000</div>
+<div class="listing_revenue">Revenue: $14,277,492 TTM</div>
+<div class="listing_income">Income: $3,297,944 TTM</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Marketing &amp; Consulting, Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/self_storage_design_supplier/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/07/storage-warehouse-g18de4093b_1280-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/07/storage-warehouse-g18de4093b_1280-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/07/storage-warehouse-g18de4093b_1280-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Self Storage Design and Metal Building Supplier</div>
+<div class="listing_price">Listing Price: $15,000,000</div>
+<div class="listing_revenue">Revenue: $19,164,680</div>
+<div class="listing_income">Income: $3,021,856</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Construction, Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/government_contract_erp/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/02/erp-8012424_1280-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/02/erp-8012424_1280-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/02/erp-8012424_1280-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Government Contract ERP Service Business</div>
+<div class="listing_price">Listing Price: $12,000,000</div>
+<div class="listing_revenue">Revenue: $14,046,972</div>
+<div class="listing_income">Income: $2,572,171</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service, Software/SaaS</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/design_build_studio_interactive_exp/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/08/designbuildstudiomarketing-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/08/designbuildstudiomarketing-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/08/designbuildstudiomarketing-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Design &amp; Build Studio for Themed Props, Structures, &amp; Interactive Experiences</div>
+<div class="listing_price">Listing Price: $10,000,000</div>
+<div class="listing_revenue">Revenue: $9,467,763 TTM</div>
+<div class="listing_income">Income: $2,500,000 2024 Projected</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Construction, Manufacturing, Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/az_addiction_treatment/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/09/AZ-rehab-recovery-marketing-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/09/AZ-rehab-recovery-marketing-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/09/AZ-rehab-recovery-marketing-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Arizona Addiction Treatment Center</div>
+<div class="listing_price">Listing Price: $10,000,000</div>
+<div class="listing_revenue">Revenue: $5,678,624 (TTM)</div>
+<div class="listing_income">Income: $2,259,199 (TTM)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/cell_phone_towerinstall/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2022/02/yzzjuxjb9aw-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="black metal tower under blue sky" srcset="https://businessexits.com/wp-content/uploads/2022/02/yzzjuxjb9aw-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2022/02/yzzjuxjb9aw-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Cell Phone Tower Installation &amp; Repair</div>
+<div class="listing_price">Listing Price: $8,000,000</div>
+<div class="listing_revenue">Revenue: $8,927,055</div>
+<div class="listing_income">Income: $1,946,908</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/network_design_sysmgmt/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/07/Netwx-Dsgn-Marketing-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/07/Netwx-Dsgn-Marketing-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/07/Netwx-Dsgn-Marketing-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Network Design and Systems Management Specialists</div>
+<div class="listing_price">Listing Price: $8,000,000</div>
+<div class="listing_revenue">Revenue: $15,258,095</div>
+<div class="listing_income">Income: $2,550,467</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service, Software/SaaS</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/erp_service_business/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/09/pexels-goumbik-574071-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/09/pexels-goumbik-574071-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/09/pexels-goumbik-574071-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">IT Services Business: Growing, Remote, with a Potential CEO in Place</div>
+<div class="listing_price">Listing Price: $8,000,000</div>
+<div class="listing_revenue">Revenue: $3,970,315 (2024 TTM)</div>
+<div class="listing_income">Income: $1,929,737 (2024 TTM)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Software/SaaS</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/sleek_products_ecommerce/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/09/ecommerce-2607114_1280-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/09/ecommerce-2607114_1280-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/09/ecommerce-2607114_1280-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Sleek Products Ecommerce Business</div>
+<div class="listing_price">Listing Price: $7,000,000</div>
+<div class="listing_revenue">Revenue: $8,864,286 TTM</div>
+<div class="listing_income">Income: $1,973,918 TTM</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Ecommerce</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/category_defining_window_manuf/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/03/window-marketing-opt-1-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/03/window-marketing-opt-1-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/03/window-marketing-opt-1-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Category Defining Window Manufacturer</div>
+<div class="listing_price">Listing Price: $7,000,000</div>
+<div class="listing_revenue">Revenue: $4,895,568</div>
+<div class="listing_income">Income: $1,539,977</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Manufacturing, Retail</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/med_screening_inmates/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/09/body-8566424_1280-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/09/body-8566424_1280-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/09/body-8566424_1280-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Medical Screening for Prison Inmates, with Contracts</div>
+<div class="listing_price">Listing Price: $7,000,000</div>
+<div class="listing_revenue">Revenue: $1,900,000 2024 Projection</div>
+<div class="listing_income">Income: $1,194,000 2024 Projection</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/home_staging_co/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/08/pexels-cmoon-5179534-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/08/pexels-cmoon-5179534-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/08/pexels-cmoon-5179534-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Luxury Home Staging Company</div>
+<div class="listing_price">Listing Price: $6,500,000 (Includes $6M in assets)</div>
+<div class="listing_revenue">Revenue:  $3,446,240 (2021-2023 Avg)</div>
+<div class="listing_income">Income: $747,078 (2021-2023 Avg)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/mt_comprehensive_lawn_care/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/04/pexels-pixabay-209296-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/04/pexels-pixabay-209296-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/04/pexels-pixabay-209296-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Montana Comprehensive Lawn Care Services</div>
+<div class="listing_price">Listing Price: $5,600,000 (includes $2.5M in equipment)</div>
+<div class="listing_revenue">Revenue: $4,468,963 (2022 &amp; 2023 average)</div>
+<div class="listing_income">Income: $1,218,321 (2022 &amp; 2023 average)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/engineering_firm_ireland/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/12/Irish-Engineering-Firm-800x500.png" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/12/Irish-Engineering-Firm-800x500.png 800w, https://businessexits.com/wp-content/uploads/2023/12/Irish-Engineering-Firm-400x250.png 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Highly Profitable Engineering Firm with Long History (📍Ireland)</div>
+<div class="listing_price">Listing Price:  €5,400,000</div>
+<div class="listing_revenue">Revenue: €7,125,792</div>
+<div class="listing_income">Income: €4,419,847</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Manufacturing, Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/pet_safety_manu/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/09/pexels-tracvu-23953073-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/09/pexels-tracvu-23953073-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/09/pexels-tracvu-23953073-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Safe&nbsp;Pet Travel Products Distribution Company</div>
+<div class="listing_price">Listing Price: $5,000,000 (Includes $1.1M in Inventory)</div>
+<div class="listing_revenue">Revenue: $1,834,798 (2023)</div>
+<div class="listing_income">Income: $771,155 (2023)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Manufacturing, Wholesale/Distribution</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/mt_plumbing_heating/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/05/iStock-1339613829-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/05/iStock-1339613829-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/05/iStock-1339613829-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Montana Plumbing and Heating Business</div>
+<div class="listing_price">Listing Price: $4,400,000 </div>
+<div class="listing_revenue">Revenue: $4,197,030 (2022 &amp; 2023 Average)</div>
+<div class="listing_income">Income: $1,079,964 (2022 &amp; 2023 Average)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Construction, Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/canada_construction_contracting/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/09/pencil-5690142_1280-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/09/pencil-5690142_1280-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/09/pencil-5690142_1280-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Canadian Construction and Contracting Services</div>
+<div class="listing_price">Listing Price: $3,500,000 CAD</div>
+<div class="listing_revenue">Revenue: $10,119,915 CAD (4 Yr Avg)</div>
+<div class="listing_income">Income: $1,522,064 CAD (4 Yr Avg)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Construction</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/jewelry_ecomm_co/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/09/Screenshot-2024-09-11-at-9.33.12-PM-800x500.png" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/09/Screenshot-2024-09-11-at-9.33.12-PM-800x500.png 800w, https://businessexits.com/wp-content/uploads/2024/09/Screenshot-2024-09-11-at-9.33.12-PM-400x250.png 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Jewelry and Accessories Wholesale and Ecommerce Business</div>
+<div class="listing_price">Listing Price:  $3,300,000</div>
+<div class="listing_revenue">Revenue: $3,518,668</div>
+<div class="listing_income">Income: $1,108,211</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Ecommerce</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/florida-med-spa-and-regenerative-medicine-clinics/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/07/6xlykffvufg-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="white wooden vanity table with mirror" srcset="https://businessexits.com/wp-content/uploads/2023/07/6xlykffvufg-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/07/6xlykffvufg-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Florida Med Spa and Regenerative Medicine Clinic</div>
+<div class="listing_price">Listing Price: $3,300,000</div>
+<div class="listing_revenue">Revenue: $1,576,577</div>
+<div class="listing_income">Income: $965,687</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/tree_care_company/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2023/08/Tree-Removal-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/08/Tree-Removal-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2023/08/Tree-Removal-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Hawaii Tree Care Service Company</div>
+<div class="listing_price">Listing Price: $3,000,000</div>
+<div class="listing_revenue">Revenue: $2,540,931 (2022 &amp; 2023 avg)</div>
+<div class="listing_income">Income: $804,366 (2022 &amp; 2023 avg)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/recruitment_agency/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/05/pexels-olly-3760069-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/05/pexels-olly-3760069-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/05/pexels-olly-3760069-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Specialized Canadian Recruitment Agency</div>
+<div class="listing_price">Listing Price: $3,000,000 CAD</div>
+<div class="listing_revenue">Revenue:  $2,283,323 CAD</div>
+<div class="listing_income">Income: $763,741 CAD</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/souvenir_gifts_manufacturer/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="600" height="450" src="/wp-content/uploads/2023/04/Gift-Shop-New-Image-Panel-2017427_305_1_12.png" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2023/04/Gift-Shop-New-Image-Panel-2017427_305_1_12.png 600w, https://businessexits.com/wp-content/uploads/2023/04/Gift-Shop-New-Image-Panel-2017427_305_1_12-300x225.png 300w" sizes="(max-width: 600px) 100vw, 600px"></div>
+  <div class="listing_details">
+<div class="listing_title">Souvenir Gifts Manufacturer</div>
+<div class="listing_price">Listing Price: $2,800,000 + Inventory</div>
+<div class="listing_revenue">Revenue: $2,936,283 (2021-2023 average)</div>
+<div class="listing_income">Income: $706,398 (2021-2023 average)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Wholesale/Distribution</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/automation_security_net_distrib/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2022/08/smart-home-2769210_1920-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2022/08/smart-home-2769210_1920-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2022/08/smart-home-2769210_1920-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Automation, Security and Networking Distribution Company</div>
+<div class="listing_price">Listing Price: $2,300,000 + Inventory</div>
+<div class="listing_revenue">Revenue: $9,218,425</div>
+<div class="listing_income">Income: $580,032</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Ecommerce, Retail, Wholesale/Distribution</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/remote_research_agency_sba_eligibility/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/08/pexels-goumbik-590022-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/08/pexels-goumbik-590022-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/08/pexels-goumbik-590022-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Remote Research Agency with 50% Net Margins and SBA Eligibility</div>
+<div class="listing_price">Listing Price: $2,200,000</div>
+<div class="listing_revenue">Revenue: $1,296,067</div>
+<div class="listing_income">Income: $700,605</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Marketing &amp; Consulting</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+		
+		<div class="row ">
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/ecommerce_craft_hobby_producer/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/02/ecomm-craft-and-hobby-producer-marketing-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/02/ecomm-craft-and-hobby-producer-marketing-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/02/ecomm-craft-and-hobby-producer-marketing-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Ecommerce Craft and Hobby Producer</div>
+<div class="listing_price">Listing Price: $2,100,000</div>
+<div class="listing_revenue">Revenue: $1,816,312 (2 Year Avg)</div>
+<div class="listing_income">Income: $575,538 (2 Year Avg)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Ecommerce</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/building_maintenance_co/">
+<div class="key-listings ">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/05/pexels-quang-nguyen-vinh-222549-2137670-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/05/pexels-quang-nguyen-vinh-222549-2137670-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/05/pexels-quang-nguyen-vinh-222549-2137670-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Building Restoration and Maintenance Company</div>
+<div class="listing_price">Listing Price: $2,000,000 CAD</div>
+<div class="listing_revenue">Revenue: $5,578,770 CAD</div>
+<div class="listing_income">Income: $689,514 CAD</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Construction, Service</div> 
+<div class="listing_label"></div>
+  </div>
+</div></a></div></div>
+		
+		
+			<div class="col-sm-4"><div class="tb-fields-and-text" data-toolset-blocks-fields-and-text="3e1d2592ce20bdf2bf813c9dfa44c991"><a href="https://businessexits.com/listing/gas_chromatogr_business/">
+<div class="key-listings Sale Pending">
+<div class="listing_image"><img loading="lazy" decoding="async" width="800" height="500" src="/wp-content/uploads/2024/04/pexels-loic-manegarium-3855962-800x500.jpg" class="attachment-listing size-listing wp-post-image" alt="" srcset="https://businessexits.com/wp-content/uploads/2024/04/pexels-loic-manegarium-3855962-800x500.jpg 800w, https://businessexits.com/wp-content/uploads/2024/04/pexels-loic-manegarium-3855962-400x250.jpg 400w" sizes="(max-width: 800px) 100vw, 800px"></div>
+  <div class="listing_details">
+<div class="listing_title">Gas Chromatography Business</div>
+<div class="listing_price">Listing Price: $2,000,000</div>
+<div class="listing_revenue">Revenue: $2,306,786 (three yr avg)</div>
+<div class="listing_income">Income: $601,329 (three yr avg)</div>
+  </div>
+<div class="listing_bottom">
+<div class="listing_type">Service</div> 
+<div class="listing_label">Sale Pending</div>
+  </div>
+</div></a></div></div>
+		</div>
+		
+	
+	
+	
+<ul class="wpv-pagination-nav-links-container js-wpv-pagination-nav-links-container pagination"><li class="wpv-pagination-nav-links-item js-wpv-pagination-nav-links-item page-item wpv-page-link-14338-1 js-wpv-page-link-14338-1 wpv_page_current wpv-pagination-nav-links-item-current active"><span class="wpv-filter-pagination-link page-link">1</span></li><li class="wpv-pagination-nav-links-item js-wpv-pagination-nav-links-item page-item wpv-page-link-14338-2 js-wpv-page-link-14338-2"><a class="wpv-filter-pagination-link js-wpv-pagination-link page-link" title="2" href="/listings/?wpv_view_count=14338&amp;wpv_paged=2" data-viewnumber="14338" data-page="2">2</a></li></ul>
+</div>
+
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_row-bg-position-top"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div></div></div></div></div>
+</section>																</div>
+			    </div>
+</section>
+
+	</main><!-- #main -->
+</div><!-- #primary -->
+
+
+
+</div>
+
+  <footer id="footer" class="fixed underline-effect">
+    <div class="upper-footer" style="">
+      <div class="container">
+        
+                              <div class="footer-widget-area">
+              
+            <div class="first-widget-area footer-widget-column col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
+            <div id="text-8" class="footer_widget widget widget_text"><h5 class="widget-title"><span>About Business Exits</span></h5>			<div class="textwidget"><p>Business Exits Inc. is a business brokerage started by entrepreneurs, <strong>for</strong> entrepreneurs. Serving nationwide, we specialize in selling your business for the best price. If you have questions or want a valuation on your business, you can contact hello@businessexits.com.</p>
+</div>
+		</div>        </div>
+    
+            <div class="second-widget-area footer-widget-column col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
+            <div id="text-10" class="footer_widget widget widget_text"><h5 class="widget-title"><span>Our brokers are in:</span></h5>			<div class="textwidget"><p>Los Angeles, CA<br>
+New York, NY<br>
+Miami, FL<br>
+Phoenix, AZ<br>
+Las Vegas, NV<br>
+Atlanta, GA<br>
+Novi, MI</p>
+</div>
+		</div>        </div>
+    
+    
+    
+          <div class="fifth-widget-area footer-widget-column col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left">
+          <div id="nav_menu-3" class="footer_widget widget widget_nav_menu"><h5 class="widget-title"><span>Other Navigation:</span></h5><div class="menu-site-footer-menu-links-container"><ul id="menu-site-footer-menu-links" class="menu"><li id="menu-item-14529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14529"><a href="https://businessexits.com/testimonials/">Testimonials</a></li>
+<li id="menu-item-14322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14322"><a href="https://businessexits.com/about/">About</a></li>
+<li id="menu-item-14589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14589"><a href="https://businessexits.com/contact/">Contact</a></li>
+<li id="menu-item-14321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14321"><a href="https://businessexits.com/blog/">Blog</a></li>
+<li id="menu-item-14324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14324"><a href="https://businessexits.com/disclaimer/">Disclaimer</a></li>
+<li id="menu-item-14323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14323"><a href="https://businessexits.com/privacy/">Privacy</a></li>
+<li id="menu-item-14325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14325"><a href="https://businessexits.com/terms-of-use/">Terms of use</a></li>
+</ul></div></div>      </div>
+    
+                </div>
+                        </div>
+    </div>
+      </footer>
+
+    <div class="back-to-top right-aligned default-style active">
+       <i class="fa fa-chevron-up"></i>
+           </div>
+
+
+
+
+
+		<script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		
+<script type="text/javascript">
+const wpvViewHead = document.getElementsByTagName( "head" )[ 0 ];
+const wpvViewExtraCss = document.createElement( "style" );
+wpvViewExtraCss.textContent = '/* ----------------------------------------- *//* View slug: current-listings - start *//* ----------------------------------------- */#single-page > div > div > div:nth-child(3) > div > div > div > div > div > form > label > input {  display:none;}#single-page > div > div > div:nth-child(3) > div > div > div > div > div > form > label { font-size:18px; }#single-page > div > div > div:nth-child(3) > div > div > div > div > div > form > select {  font-size:18px;   padding:3px;}.wpv-sort-control-orderby {  margin:0 10px;}.type_select {  margin:0 20px;} .wpv-pagination-nav-links-item:before {display: none;}.wpv-pagination-nav-links-item {padding-left: 9px !important;}.wpv-pagination-nav-links-item span,.wpv-pagination-nav-links-item a {padding: 7px 14px !important;}.pagination {padding-top:10px;}@media (max-width: 959px) {ul.pagination {    flex-direction: row;}}/* ----------------------------------------- *//* View slug: current-listings - end *//* ----------------------------------------- */<!--[if IE 7]><style>.wpv-pagination { *zoom: 1; }</style><![endif]-->';
+wpvViewHead.appendChild( wpvViewExtraCss );
+</script>
+
+<script type="text/javascript">
+const wpvCtHead = document.getElementsByTagName( "head" )[ 0 ];
+const wpvCtExtraCss = document.createElement( "style" );
+wpvCtExtraCss.textContent = '/* ----------------------------------------- *//* Content Template: loop-item-in-current-listings - start *//* ----------------------------------------- */.key-listings { background-color: white;    -webkit-transition: 0.2s;    -o-transition: 0.2s;    transition: 0.2s;    text-align: left;    overflow: hidden;    border-radius: 7px;    box-shadow: 0 20px 70px rgb(38 42 76 / 20%);    display: inline-block;    width: -webkit-fill-available;     margin-top:20px;}.listing_details .listing_title { font-size:23px;  font-weight:500; line-height:26px;  color:#1e266d;}.listing_details .listing_price {  font-weight:500;}.listing_details {    padding: 20px;    color: black;    height: 260px;    overflow: auto;}.listing_details * {    font-size: 18px;    line-height: 22px;    color: #0c0c0c;    font-weight: 400;    padding: 10px 0;    border-radius: 0px 0px 0px 0px;    background: transparent;    z-index: 2 !important;    display: block; }.listing_bottom {    background: #f1f6ff;    height: 40px;    padding: 8px 10px;    color: #57585a;    font-size: 20px;    overflow: hidden;    line-height: 26px;}.listing_type { float:left; }.listing_label {  float:right;  }.Pending img{  position: relative;}.Pending img {  display: block;  opacity: 0.6;}.Pending .listing_image {  background-image: url(\"/wp-content/uploads/2022/06/pending_grey.png\");  background-size: 100% 100%;  background-repeat: no-repeat;  font-weight: bold;    }/* ----------------------------------------- *//* Content Template: loop-item-in-current-listings - end *//* ----------------------------------------- */';
+wpvCtHead.appendChild( wpvCtExtraCss );
+</script>
+<div class="wpc-filters-overlay"></div>
+<script type="text/html" id="wpb-modifications"> window.wpbCustomElement = 1; </script>	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel="stylesheet" id="redux-custom-fonts-css" href="//businessexits.com/wp-content/uploads/redux/custom-fonts/fonts.css?ver=1728223206" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="https://businessexits.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.4" media="all">
+<style id="rs-plugin-settings-inline-css">
+#rs-demo-id {}
+</style>
+<script src="https://businessexits.com/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0" id="jquery-form-js"></script>
+<script id="cf7mls-js-extra">
+var cf7mls_object = {"ajax_url":"https:\/\/businessexits.com\/wp-admin\/admin-ajax.php","cf7mls_error_message":"","scroll_step":"false"};
+</script>
+<script src="https://businessexits.com/wp-content/plugins/contact-form-7-multi-step/assets/frontend/js/cf7mls.js?ver=1.0" id="cf7mls-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8" id="swv-js"></script>
+<script id="contact-form-7-js-extra">
+var wpcf7 = {"api":{"root":"https:\/\/businessexits.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+</script>
+<script src="https://businessexits.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8" id="contact-form-7-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/digital-signature-contact-form-7-addon/admin/assets/js/cf7-front.min.js?ver=12" id="digital-signature-js-js"></script>
+<script id="pt-cv-content-views-script-js-extra">
+var PT_CV_PUBLIC = {"_prefix":"pt-cv-","page_to_show":"5","_nonce":"72b27d70d0","is_admin":"","is_mobile":"","ajaxurl":"https:\/\/businessexits.com\/wp-admin\/admin-ajax.php","lang":"","loading_image_src":"data:image\/gif;base64,R0lGODlhDwAPALMPAMrKygwMDJOTkz09PZWVla+vr3p6euTk5M7OzuXl5TMzMwAAAJmZmWZmZszMzP\/\/\/yH\/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAPACwAAAAADwAPAAAEQvDJaZaZOIcV8iQK8VRX4iTYoAwZ4iCYoAjZ4RxejhVNoT+mRGP4cyF4Pp0N98sBGIBMEMOotl6YZ3S61Bmbkm4mAgAh+QQFCgAPACwAAAAADQANAAAENPDJSRSZeA418itN8QiK8BiLITVsFiyBBIoYqnoewAD4xPw9iY4XLGYSjkQR4UAUD45DLwIAIfkEBQoADwAsAAAAAA8ACQAABC\/wyVlamTi3nSdgwFNdhEJgTJoNyoB9ISYoQmdjiZPcj7EYCAeCF1gEDo4Dz2eIAAAh+QQFCgAPACwCAAAADQANAAAEM\/DJBxiYeLKdX3IJZT1FU0iIg2RNKx3OkZVnZ98ToRD4MyiDnkAh6BkNC0MvsAj0kMpHBAAh+QQFCgAPACwGAAAACQAPAAAEMDC59KpFDll73HkAA2wVY5KgiK5b0RRoI6MuzG6EQqCDMlSGheEhUAgqgUUAFRySIgAh+QQFCgAPACwCAAIADQANAAAEM\/DJKZNLND\/kkKaHc3xk+QAMYDKsiaqmZCxGVjSFFCxB1vwy2oOgIDxuucxAMTAJFAJNBAAh+QQFCgAPACwAAAYADwAJAAAEMNAs86q1yaWwwv2Ig0jUZx3OYa4XoRAfwADXoAwfo1+CIjyFRuEho60aSNYlOPxEAAAh+QQFCgAPACwAAAIADQANAAAENPA9s4y8+IUVcqaWJ4qEQozSoAzoIyhCK2NFU2SJk0hNnyEOhKR2AzAAj4Pj4GE4W0bkJQIAOw==","is_mobile_tablet":"","sf_no_post_found":"No posts found.","lf__separator":","};
+var PT_CV_PAGINATION = {"first":"\u00ab","prev":"\u2039","next":"\u203a","last":"\u00bb","goto_first":"Go to first page","goto_prev":"Go to previous page","goto_next":"Go to next page","goto_last":"Go to last page","current_page":"Current page is","goto_page":"Go to page"};
+</script>
+<script src="https://businessexits.com/wp-content/plugins/content-views-query-and-display-post-page/public/assets/js/cv.js?ver=3.8.0" id="pt-cv-content-views-script-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/pt-content-views-pro/public/assets/js/cvpro.min.js?ver=6.4.0" id="pt-cv-public-pro-script-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.4" defer="" async="" id="tp-tools-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.4" defer="" async="" id="revmin-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.8.0.2" id="js-cookie-js"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+</script>
+<script src="https://businessexits.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.0.2" id="woocommerce-js"></script>
+<script src="https://businessexits.com/wp-content/themes/sway/core/assets/js/bootstrap.min.js?ver=2.8" id="bootstrapjs-js"></script>
+<script src="https://businessexits.com/wp-content/themes/sway/core/assets/js/SmoothScroll.js?ver=2.8" id="sway-smooth-scroll-js"></script>
+<script src="https://businessexits.com/wp-content/themes/sway/core/assets/js/scripts.js?ver=2.8" id="sway-scripts-js"></script>
+<script id="sway-scripts-js-after">
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGNSW4T');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V179WF4YBF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V179WF4YBF');
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700" rel="stylesheet"> 
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1990836891137645');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1990836891137645&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGNSW4T" height="0" width="0" style="display:none;visibility:hidden"> </iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->	
+<script>
+jQuery( document ).ready(function() {
+    jQuery('.search .archive-description').insertAfter('.site-header');
+   jQuery('.search .archive-description' ).wrapInner('<div class="wrap"></div>');
+});
+jQuery(function($){
+  $(".itunes-link").on("click", function(){
+    window.location.href = "itmss://itunes.apple.com/us/podcast/digital-exits-podcast-internet/id797851208?mt=2";
+  });
+});
+</script>
+<script src="https://businessexits.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script src="https://businessexits.com/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
+<script src="https://businessexits.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="https://businessexits.com/wp-includes/js/dist/a11y.min.js?ver=d90eebea464f6c09bfd5" id="wp-a11y-js"></script>
+<script defer="defer" src="https://businessexits.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.7.17" id="gform_placeholder-js"></script>
+<script defer="defer" src="https://businessexits.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=4ef53fe41c14a48b294541d9fc37387e" id="gform_gravityforms_theme_vendors-js"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"39f7d144958b957213713db9f4e189d1"}}},"hmr_dev":"","public_path":"https:\/\/businessexits.com\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/"};
+</script>
+<script defer="defer" src="https://businessexits.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=f4d12a887a23a8c5755fd2b956bc8fcf" id="gform_gravityforms_theme-js"></script>
+<script src="https://businessexits.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.13.3" id="jquery-ui-slider-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js?ver=8.0.2" id="wc-jquery-ui-touchpunch-js"></script>
+<script id="wpc-filter-everything-js-extra">
+var wpcFilterFront = {"ajaxUrl":"https:\/\/businessexits.com\/wp-admin\/admin-ajax.php","wpcAjaxEnabled":"","wpcStatusCookieName":"wpcContainersStatus","wpcMoreLessCookieName":"wpcMoreLessStatus","wpcHierarchyListCookieName":"wpcHierarchyListStatus","wpcWidgetStatusCookieName":"wpcWidgetStatus","wpcMobileWidth":"768","showBottomWidget":"no","_nonce":"a7e4e9089a","wpcPostContainers":{"default":"","15462":"#listings-row"},"wpcAutoScroll":"","wpcAutoScrollOffset":"150","wpcWaitCursor":"1","wpcPostsPerPage":{"15462":100},"wpcUseSelect2":"","wpcDateFilters":"","wpcPopupCompatMode":"","wpcApplyButtonSets":[15462],"wpcQueryOnThePageSets":[15462],"wpcNoPostsContainerMsg":"It appears that this page does not contain a container with the specified \u00abHTML id or class of the Posts Container\u00bb. Try to specify the correct one in the Filter Set settings or the common plugin Settings."};
+</script>
+<script src="https://businessexits.com/wp-content/plugins/filter-everything-pro/assets/js/filter-everything.min.js?ver=1.8.4" id="wpc-filter-everything-js"></script>
+<script src="https://businessexits.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.0" id="wpb_composer_front_js-js"></script>
+<script src="https://businessexits.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script src="https://businessexits.com/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2" id="jquery-touch-punch-js"></script>
+<script id="mediaelement-core-js-before">
+var mejsL10n = {"language":"en","strings":{"mejs.download-file":"Download File","mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen":"Fullscreen","mejs.play":"Play","mejs.pause":"Pause","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.live-broadcast":"Live Broadcast","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script src="https://businessexits.com/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17" id="mediaelement-core-js"></script>
+<script src="https://businessexits.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=6.6.1" id="mediaelement-migrate-js"></script>
+<script id="mediaelement-js-extra">
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive","audioShortcodeLibrary":"mediaelement","videoShortcodeLibrary":"mediaelement"};
+</script>
+<script src="https://businessexits.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=6.6.1" id="wp-mediaelement-js"></script>
+<script src="https://businessexits.com/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+<script id="wp-util-js-extra">
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+</script>
+<script src="https://businessexits.com/wp-includes/js/wp-util.min.js?ver=6.6.1" id="wp-util-js"></script>
+<script src="https://businessexits.com/wp-includes/js/backbone.min.js?ver=1.5.0" id="backbone-js"></script>
+<script src="https://businessexits.com/wp-includes/js/mediaelement/wp-playlist.min.js?ver=6.6.1" id="wp-playlist-js"></script>
+<script id="views-blocks-frontend-js-extra">
+var wpv_pagination_local = {"front_ajaxurl":"https:\/\/businessexits.com\/wp-admin\/admin-ajax.php","calendar_image":"https:\/\/businessexits.com\/wp-content\/plugins\/wp-views\/embedded\/res\/img\/calendar.gif","calendar_text":"Select date","datepicker_min_date":null,"datepicker_max_date":null,"datepicker_min_year":"1582","datepicker_max_year":"3000","resize_debounce_tolerance":"100","datepicker_style_url":"https:\/\/businessexits.com\/wp-content\/plugins\/wp-views\/vendor\/toolset\/toolset-common\/toolset-forms\/css\/wpt-jquery-ui\/jquery-ui-1.11.4.custom.css","wpmlLang":""};
+</script>
+<script src="https://businessexits.com/wp-content/plugins/wp-views/public/js/views-frontend.js?ver=3.6.2" id="views-blocks-frontend-js"></script>
+<script></script><style type="text/css"></style><script type="text/javascript">var essb_clicked_lovethis = false; var essb_love_you_message_thanks = "Thank you for loving this."; var essb_love_you_message_loved = "You already love this today."; var essb_lovethis = function(oInstance) { if (essb_clicked_lovethis) { alert(essb_love_you_message_loved); return; } var element = jQuery('.essb_'+oInstance); if (!element.length) { return; } var instance_post_id = jQuery(element).attr("data-essb-postid") || ""; var cookie_set = essb_get_lovecookie("essb_love_"+instance_post_id); if (cookie_set) { alert(essb_love_you_message_loved); return; } if (typeof(essb_settings) != "undefined") { jQuery.post(essb_settings.ajax_url, { 'action': 'essb_love_action', 'post_id': instance_post_id, 'service': 'love', 'nonce': essb_settings.essb3_nonce }, function (data) { if (data) { alert(essb_love_you_message_thanks); }},'json'); } essb_tracking_only('', 'love', oInstance, true); }; var essb_get_lovecookie = function(name) { var value = "; " + document.cookie; var parts = value.split("; " + name + "="); if (parts.length == 2) return parts.pop().split(";").shift(); }; var essb_window = function(oUrl, oService, oInstance) { var element = jQuery('.essb_'+oInstance); var instance_post_id = jQuery(element).attr("data-essb-postid") || ""; var instance_position = jQuery(element).attr("data-essb-position") || ""; var wnd; var w = 800 ; var h = 500; if (oService == "twitter") { w = 500; h= 300; } var left = (screen.width/2)-(w/2); var top = (screen.height/2)-(h/2); if (oService == "twitter") { wnd = window.open( oUrl, "essb_share_window", "height=300,width=500,resizable=1,scrollbars=yes,top="+top+",left="+left ); } else { wnd = window.open( oUrl, "essb_share_window", "height=500,width=800,resizable=1,scrollbars=yes,top="+top+",left="+left ); } if (typeof(essb_settings) != "undefined") { if (essb_settings.essb3_stats) { if (typeof(essb_handle_stats) != "undefined") { essb_handle_stats(oService, instance_post_id, oInstance); } } if (essb_settings.essb3_ga) { essb_ga_tracking(oService, oUrl, instance_position); } } essb_self_postcount(oService, instance_post_id); var pollTimer = window.setInterval(function() { if (wnd.closed !== false) { window.clearInterval(pollTimer); essb_smart_onclose_events(oService, instance_post_id); } }, 200); }; var essb_self_postcount = function(oService, oCountID) { if (typeof(essb_settings) != "undefined") { oCountID = String(oCountID); jQuery.post(essb_settings.ajax_url, { 'action': 'essb_self_postcount', 'post_id': oCountID, 'service': oService, 'nonce': essb_settings.essb3_nonce }, function (data) { if (data) { }},'json'); } }; var essb_smart_onclose_events = function(oService, oPostID) { if (typeof (essbasc_popup_show) == 'function') { essbasc_popup_show(); } if (typeof essb_acs_code == 'function') { essb_acs_code(oService, oPostID); } }; var essb_tracking_only = function(oUrl, oService, oInstance, oAfterShare) { var element = jQuery('.essb_'+oInstance); if (oUrl == "") { oUrl = document.URL; } var instance_post_id = jQuery(element).attr("data-essb-postid") || ""; var instance_position = jQuery(element).attr("data-essb-position") || ""; if (typeof(essb_settings) != "undefined") { if (essb_settings.essb3_stats) { if (typeof(essb_handle_stats) != "undefined") { essb_handle_stats(oService, instance_post_id, oInstance); } } if (essb_settings.essb3_ga) { essb_ga_tracking(oService, oUrl, instance_position); } } essb_self_postcount(oService, instance_post_id); if (oAfterShare) { essb_smart_onclose_events(oService, instance_post_id); } }; var essb_pinterest_picker = function(oInstance) { essb_tracking_only('', 'pinterest', oInstance); var e=document.createElement('script'); e.setAttribute('type','text/javascript'); e.setAttribute('charset','UTF-8'); e.setAttribute('src','//assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e); };</script><script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 10) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger('gform_post_render', [10, 1]);gform.utils.trigger({ event: 'gform/postRender', native: false, data: { formId: 10, currentPage: 1 } });} );
+</script>
+
+
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" hidden="hidden">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div id="cvpboxOverlay" style="display: none;"></div><div id="cvpcolorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cvpboxWrapper"><div><div id="cvpboxTopLeft" style="float: left;"></div><div id="cvpboxTopCenter" style="float: left;"></div><div id="cvpboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cvpboxMiddleLeft" style="float: left;"></div><div id="cvpboxContent" style="float: left;"><div id="cvpboxTitle" style="float: left;"></div><div id="cvpboxCurrent" style="float: left;"></div><button type="button" id="cvpboxPrevious">previous</button><button type="button" id="cvpboxNext">next</button><button type="button" id="cvpboxSlideshow">slideshow</button><div id="cvpboxLoadingOverlay" style="float: left;"></div><div id="cvpboxLoadingGraphic" style="float: left;"></div></div><div id="cvpboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cvpboxBottomLeft" style="float: left;"></div><div id="cvpboxBottomCenter" style="float: left;"></div><div id="cvpboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="tiptip_holder" style="max-width:220px;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div></body>

@@ -4,12 +4,20 @@
  *@type{string}
  */
 export const AUTH_ROUTES = ["/auth/login"];
+
 /**
  *
  *These are the routes that are protected and user cant access without being logged in
  *@type{string}
  */
-export const PROTECTED_ROUTES = ["/", "/raw-deals", "/published-deals", "/"];
+export const PROTECTED_ROUTES = ["/", "/raw-deals", "/published-deals"];
+
+/**
+ *
+ *These are the base routes on all other routes that come after them are protected and user cant access without being logged in
+ *@type{string}
+ */
+export const PROTECTED_BASE_ROUTES = ["/raw-deals"];
 
 /**
  *

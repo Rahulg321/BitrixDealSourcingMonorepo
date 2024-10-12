@@ -33,18 +33,22 @@ export type RawDeal = {
 
 export type SnapshotDeal = {
   id: string;
+  source: string;
+  cashFlow?: string;
+  location?: string;
+  description?: string;
 
-  asking_price: string; // e.g., "$15,500,000"
-  category: string; // e.g., "Pharmacy"
+  asking_price?: string; // e.g., "$15,500,000"
+  category?: string; // e.g., "Pharmacy"
   created_at: Timestamp; // Firestore Timestamp
-  link: string; // e.g., "https://americanhealthcarecapital.com/listing/xyrx1w/"
-  listing_code: string; // e.g., "XYRX1W"
+  link?: string; // e.g., "https://americanhealthcarecapital.com/listing/xyrx1w/"
+  listing_code?: string; // e.g., "XYRX1W"
   main_content: string; // Full description text from the deal listing
-  revenue: string; // e.g., "$25,000,000"
+  revenue?: string; // e.g., "$25,000,000"
   scraped_by: string; // e.g., "Rahul Gupta"
-  state: string; // e.g., "Not Disclosed"
+  state?: string; // e.g., "Not Disclosed"
   title: string; // e.g., "Highly Profitable Assisted Living & Group Home-LTC Pharmacy"
-  under_contract: string; // e.g., "Yes"
+  under_contract?: string; // e.g., "Yes"
   status?: "Approved" | "Rejected";
 };
 

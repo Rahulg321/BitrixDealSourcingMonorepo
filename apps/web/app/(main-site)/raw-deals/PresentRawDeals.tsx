@@ -18,6 +18,7 @@ const PresentRawDeals = ({
   deals: SnapshotDeal[];
 }) => {
   const [showTableView, setShowTableView] = useState(false);
+
   const dataTableDeals: DataTableDeal[] = deals.map((e) => {
     return {
       id: e.id,
@@ -70,6 +71,8 @@ const PresentRawDeals = ({
                   state={deal.state}
                   fileContent={fileContent}
                   status={deal.status}
+                  source={deal.source}
+                  cashFlow={deal.cashFlow}
                 />
               );
             })}
