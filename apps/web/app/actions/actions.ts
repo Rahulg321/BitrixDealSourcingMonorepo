@@ -1,7 +1,7 @@
 "use server";
 
 import axios from "axios";
-import { DealCardProps } from "../components/DealCard";
+import { SnapshotDeal } from "../../lib/db";
 // import PDFDocument from "pdfkit"; // Library to generate PDF
 
 // async function createTeaserDocFromContent(
@@ -173,6 +173,7 @@ export async function createCompanyIfNotExists(companyName: string) {
     }
   }
 }
+
 export const addDealToCRM = async ({
   id,
   title,
@@ -184,7 +185,7 @@ export const addDealToCRM = async ({
   state,
   category,
   main_content,
-}: DealCardProps) => {
+}: SnapshotDeal) => {
   try {
     // Step 1: Create or find the company if necessary
     const companyName = "Default Company"; // If no company info in the props, use a default or dynamic company
@@ -200,7 +201,10 @@ export const addDealToCRM = async ({
       contactPhone
     );
 
-    const cleanedRevenue = parseFloat(revenue.replace(/[^0-9.]/g, ""));
+    const cleanedRevenue = revenue
+      ? parseFloat(revenue.replace(/[^0-9.]/g, ""))
+      : 0;
+
     if (isNaN(cleanedRevenue)) {
       throw new Error(
         "Invalid revenue: Please ensure the revenue value is numeric."

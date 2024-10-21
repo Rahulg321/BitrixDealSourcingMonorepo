@@ -168,19 +168,7 @@ const DealCard = ({ deal, fileContent }: DealCardProps) => {
         </div>
       </CardContent>
       <CardFooter className="flex flex-col gap-4">
-        <PublishBitrixDialog
-          id={id}
-          title={title}
-          under_contract={under_contract}
-          revenue={revenue}
-          link={link}
-          asking_price={asking_price}
-          listing_code={listing_code}
-          state={state}
-          category={category}
-          fileContent={fileContent}
-          main_content={main_content}
-        />
+        <PublishBitrixDialog deal={deal} />
 
         <Button className="w-full" variant={"outline"} asChild>
           <Link href={`/raw-deals/${id}`}>

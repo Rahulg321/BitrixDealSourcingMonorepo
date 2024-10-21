@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useTransition } from "react";
-import { DealCardProps } from "../DealCard";
 import {
   Dialog,
   DialogContent,
@@ -14,8 +13,9 @@ import { useToast } from "@repo/ui/hooks/use-toast";
 import { Send, SendIcon } from "lucide-react";
 import { Button } from "@repo/ui/components/button";
 import { addDealToCRM } from "../../actions/actions";
+import { SnapshotDeal } from "../../../lib/db";
 
-const PublishBitrixDialog = (dealProps: DealCardProps) => {
+const PublishBitrixDialog = ({ deal }: { deal: SnapshotDeal }) => {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
   const [openDialog, setOpenDialog] = useState(false);
@@ -31,7 +31,7 @@ const PublishBitrixDialog = (dealProps: DealCardProps) => {
         <DialogHeader>
           <DialogTitle>Publish this Deal?</DialogTitle>
           <DialogDescription>
-            This action cannot be undone. This will publish {dealProps.title} to
+            This action cannot be undone. This will publish {deal.title} to
             bitrix.
           </DialogDescription>
         </DialogHeader>
@@ -41,7 +41,7 @@ const PublishBitrixDialog = (dealProps: DealCardProps) => {
             className="w-full"
             onClick={() => {
               startTransition(async () => {
-                const response = await addDealToCRM(dealProps);
+                const response = await addDealToCRM(deal);
                 if (response.type === "success") {
                   toast({
                     variant: "success",
