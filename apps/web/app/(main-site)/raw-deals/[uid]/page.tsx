@@ -118,19 +118,7 @@ const DealSpecificPage = async ({ params }: { params: { uid: string } }) => {
               </Button>
             )}
 
-            <PublishBitrixDialog
-              id={params.uid}
-              title={title}
-              under_contract={under_contract}
-              revenue={revenue}
-              link={link}
-              asking_price={asking_price}
-              listing_code={listing_code}
-              state={state}
-              category={category}
-              fileContent={fileContent}
-              main_content={main_content}
-            />
+            <PublishBitrixDialog deal={fetchedDeal} />
           </div>
         </div>
       </div>
