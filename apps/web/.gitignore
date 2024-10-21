@@ -13,6 +13,11 @@
 /.next/
 /out/
 
+
+
+firebase-admin.json
+deal-admin-key.json
+
 # production
 /build
 

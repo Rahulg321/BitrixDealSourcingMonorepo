@@ -1,8 +1,22 @@
 import Image from "next/image";
 import React, { Suspense } from "react";
 import SigninWithGoogleForm from "../../../components/forms/SigninWithGoogleForm";
+import { auth } from "../../../../auth";
+import { redirect } from "next/navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Log In to Dark Alpha Capital Deal Sourcing Organization",
+  description: "Login to Dark Alpha Capital",
+};
 
 const LoginPage = async () => {
+  const session = await auth();
+
+  if (session) {
+    return redirect("/");
+  }
+
   return (
     <section className="min-h-screen grid grid-cols-1 md:grid-cols-2">
       {/* Left Section: Image */}

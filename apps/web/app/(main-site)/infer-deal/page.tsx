@@ -21,6 +21,8 @@ import { inferDealFromDescription } from "../../actions/infer-deal";
 import { readStreamableValue } from "ai/rsc";
 import { Pen, Save } from "lucide-react";
 import { resolve } from "path";
+import Link from "next/link";
+import EditInferDealDialog from "../../components/dialogs/edit-infer-deal-dialog";
 
 const InferDealSchema = z.object({
   description: z
@@ -48,7 +50,7 @@ const InferNewDealPage = () => {
   async function SaveDealToDatabase() {
     saveDealTransition(async () => {
       await new Promise((resolve) => setTimeout(resolve, 5000));
-      console.log("object to save", generation);
+      console.log("generation", JSON.parse(generation));
     });
   }
 
@@ -127,9 +129,7 @@ const InferNewDealPage = () => {
               <Save className="mr-2 size-4" /> Save Deal
             </Button>
 
-            <Button>
-              <Pen className="mr-2 size-4" /> Edit Deal
-            </Button>
+            <EditInferDealDialog />
           </div>
         </div>
       </div>

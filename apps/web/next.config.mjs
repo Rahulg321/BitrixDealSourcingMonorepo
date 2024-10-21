@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@repo/ui", "@repo/firebase-client"],
+  transpilePackages: [
+    "@repo/ui",
+    "@repo/firebase-client",
+    "google-gax",
+    "@google-cloud/firestore",
+  ],
   images: {
     remotePatterns: [
       {

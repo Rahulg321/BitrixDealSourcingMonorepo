@@ -1,4 +1,4 @@
-import { fetchSpecificDeal } from "@repo/firebase-client/db";
+import { fetchSpecificDeal } from "../../../../../lib/db";
 import React from "react";
 import EditDealForm from "../../../../components/forms/EditDealForm";
 import path from "path";
@@ -71,7 +71,6 @@ const EditDealPage = async ({ params }: { params: { uid: string } }) => {
             listing_code={listing_code}
             state={state}
             category={category}
-            fileContent={fileContent}
             main_content={main_content ? main_content : ""}
             explanation={explanation ? explanation : ""}
           />

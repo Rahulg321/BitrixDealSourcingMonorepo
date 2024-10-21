@@ -5,7 +5,7 @@ import {
   deleteDealFromDatabase,
   editDealInDatabase,
   updateDealStatusFirebase,
-} from "@repo/firebase-client/db";
+} from "../../lib/db";
 import { revalidatePath } from "next/cache";
 import {
   dealSchema,

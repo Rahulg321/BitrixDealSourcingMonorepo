@@ -25,53 +25,37 @@ import {
   Hash,
   MapPinIcon,
   MinusCircle,
-  SendIcon,
   Tag,
 } from "lucide-react";
 import Link from "next/link";
 import ScreenDealDialog from "./dialogs/ScreenDealDialog";
-import { mainModule } from "process";
 import PublishBitrixDialog from "./dialogs/PublishBitrixDialog";
 import { MdMoney } from "react-icons/md";
+import { SnapshotDeal } from "../../lib/db";
 
-export type DealCardProps = {
-  id: string;
-  title: string;
-  under_contract?: string;
-  revenue?: string;
-  link?: string;
-  cashFlow?: string;
-  asking_price?: string;
-  listing_code?: string;
-  description?: string;
-  state?: string;
-  location?: string;
-  category?: string;
-  source: string;
-  main_content: string;
-  fileContent: any;
-  status?: "Approved" | "Rejected";
+type DealCardProps = {
+  deal: SnapshotDeal;
+  fileContent: string;
 };
 
-const DealCard = ({
-  id,
-  title,
-  under_contract,
-  revenue,
-  link,
-  cashFlow,
-  description,
-  asking_price,
-  listing_code,
-  state,
-  location,
-  category,
-  source,
-  fileContent,
-  main_content,
-  status,
-}: DealCardProps) => {
-  console.log("status", status);
+const DealCard = ({ deal, fileContent }: DealCardProps) => {
+  const {
+    title,
+    id,
+    description,
+    status,
+    link,
+    category,
+    revenue,
+    source,
+    under_contract,
+    listing_code,
+    state,
+    location,
+    cashFlow,
+    asking_price,
+    main_content,
+  } = deal;
 
   return (
     <Card className="relative  overflow-hidden transition-all duration-300 hover:shadow-lg">
@@ -205,20 +189,20 @@ const DealCard = ({
         </Button>
 
         <ScreenDealDialog
-          id={id}
-          title={title}
-          under_contract={under_contract}
-          revenue={revenue}
-          link={link}
-          asking_price={asking_price}
-          listing_code={listing_code}
-          state={state}
-          category={category}
+          dealContent={{
+            title,
+            under_contract,
+            revenue,
+            link,
+            asking_price,
+            listing_code,
+            state,
+            status,
+            category,
+            main_content,
+            id,
+          }}
           fileContent={fileContent}
-          main_content={main_content}
-          status={status}
-          source={source}
-          description={description}
         />
       </CardFooter>
     </Card>

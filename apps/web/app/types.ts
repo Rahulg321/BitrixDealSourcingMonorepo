@@ -21,3 +21,8 @@ export type ScrapedDeal = {
   OPPORTUNITY?: number; // Revenue or deal value
   CURRENCY_ID?: string; // Currency for the deal (e.g., "USD")
 };
+
+export enum UserRole {
+  USER,
+  ADMIN,
+}

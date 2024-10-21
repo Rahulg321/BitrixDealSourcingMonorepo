@@ -26,7 +26,6 @@ import {
 import Link from "next/link";
 import { Pen, PenIcon } from "lucide-react";
 import { useToast } from "@repo/ui/hooks/use-toast";
-import { DealCardProps } from "../DealCard";
 import { editDealFromFirebase } from "../../actions";
 import { useRouter } from "next/navigation";
 
@@ -46,6 +45,21 @@ export const dealSchema = z.object({
 
 export type DealSchemaZodType = z.infer<typeof dealSchema>;
 
+type EditDealFormProps = {
+  title: string;
+  under_contract?: string;
+  revenue?: string;
+  link?: string;
+  asking_price?: string;
+  listing_code?: string;
+  state?: string;
+  status?: "Approved" | "Rejected";
+  category?: string;
+  main_content?: string;
+  explanation?: string;
+  id: string;
+};
+
 const EditDealForm = ({
   id,
   title,
@@ -55,13 +69,11 @@ const EditDealForm = ({
   asking_price,
   listing_code,
   state,
-  source,
+  status,
   category,
   main_content,
-  fileContent,
   explanation,
-  status,
-}: DealCardProps & { explanation: string }) => {
+}: EditDealFormProps) => {
   const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
   const router = useRouter();

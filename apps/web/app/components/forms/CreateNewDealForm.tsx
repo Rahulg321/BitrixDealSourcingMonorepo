@@ -31,6 +31,10 @@ import { addDealToFirebase, editDealFromFirebase } from "../../actions";
 import { useRouter } from "next/navigation";
 
 export const newDealSchema = z.object({
+  first_name: z.string().min(1).optional(),
+  last_name: z.string().min(1).optional(),
+  direct_phone: z.string().min(1).optional(),
+  work_phone: z.string().min(1).optional(),
   title: z.string().min(1, "Title is required"),
   under_contract: z.string().optional(),
   revenue: z.string().optional(),
@@ -54,6 +58,10 @@ const CreateNewDealForm = () => {
   const form = useForm<NewDealSchemaZodType>({
     resolver: zodResolver(newDealSchema),
     defaultValues: {
+      first_name: "",
+      last_name: "",
+      direct_phone: "",
+      work_phone: "",
       title: "",
       under_contract: "",
       revenue: "",
@@ -97,6 +105,58 @@ const CreateNewDealForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <FormField
+          control={form.control}
+          name="first_name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>First Name</FormLabel>
+              <FormControl>
+                <Input placeholder="first_name..." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="last_name"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Last Name</FormLabel>
+              <FormControl>
+                <Input placeholder="last_name..." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="direct_phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Direct Phone</FormLabel>
+              <FormControl>
+                <Input placeholder="direct_phone..." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="work_phone"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Work Phone</FormLabel>
+              <FormControl>
+                <Input placeholder="work_phone..." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="title"

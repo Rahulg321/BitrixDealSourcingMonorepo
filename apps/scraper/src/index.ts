@@ -2,13 +2,8 @@ import { Page, Browser, executablePath } from "puppeteer";
 // import puppeteer from "puppeteer";
 import * as cheerio from "cheerio";
 import dotenv from "dotenv";
-import { addDealsToDatabase } from "@repo/firebase-client/db";
 import puppeteer from "puppeteer-extra";
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
-import fs from "fs";
-import { readFile } from "fs/promises";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
 
 // Add stealth plugin and use defaults (all tricks to hide puppeteer usage)
 // fix the type error

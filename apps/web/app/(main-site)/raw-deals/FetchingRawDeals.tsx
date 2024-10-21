@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  fetchDocumentsWithPagination,
-  RawDeal,
-  SnapshotDeal,
-} from "@repo/firebase-client/db";
+import { fetchDocumentsWithPagination, SnapshotDeal } from "../../../lib/db";
 import React, { useEffect, useState } from "react";
 import PresentRawDeals from "./PresentRawDeals";
 import { Button } from "@repo/ui/components/button";

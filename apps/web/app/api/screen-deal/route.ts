@@ -27,7 +27,5 @@ export async function POST(req: Request) {
     },
   });
 
-  console.log("result of screening deal using openai", result);
-
   return result.toTextStreamResponse();
 }

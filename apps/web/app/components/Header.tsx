@@ -50,6 +50,7 @@ export const NavLinks = [
   { navlink: "/", navlabel: "Home" },
   { navlink: "/raw-deals", navlabel: "Raw Deals" },
   { navlink: "/published-deals", navlabel: "Published Deals" },
+  { navlink: "/admin", navlabel: "Admin Panel" },
 ];
 
 const Header = ({ classname, session }: HeaderProps) => {

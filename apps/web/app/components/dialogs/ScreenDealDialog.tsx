@@ -13,12 +13,33 @@ import { Button } from "@repo/ui/components/button";
 import { Brain } from "lucide-react";
 import { experimental_useObject as useObject } from "ai/react";
 import { LoaderIcon } from "lucide-react"; // Using the LoaderIcon from Lucide for the spinner
-import { DealCardProps } from "../DealCard";
 import { updateDealStatus } from "../../actions";
 import { useToast } from "@repo/ui/hooks/use-toast";
 import { dealScreenSchema } from "../schemas";
+import { SnapshotDeal } from "../../../lib/db";
 
-const ScreenDealDialog = (dealProps: DealCardProps) => {
+type ScreenDealDialogProps = {
+  dealContent: {
+    title: string;
+    under_contract?: string;
+    revenue?: string;
+    link?: string;
+    asking_price?: string;
+    listing_code?: string;
+    state?: string;
+    status?: "Approved" | "Rejected";
+    category?: string;
+    main_content?: string;
+    explanation?: string;
+    id: string;
+  };
+  fileContent: string;
+};
+
+const ScreenDealDialog = ({
+  fileContent,
+  dealContent,
+}: ScreenDealDialogProps) => {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
   const [openDialog, setOpenDialog] = useState(false);
@@ -30,14 +51,14 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
   const saveResultToDatabase = async () => {
     if (!object || !object.approvalStatus || !object.explanation) {
       console.error("No valid data to save.");
-      return;
+      throw new Error("Deal Explanation is not available");
     }
 
     try {
       console.log("Saving result to the database", object);
       startTransition(async () => {
         const response = await updateDealStatus(
-          dealProps.id,
+          dealContent.id,
           object.approvalStatus as "Approved" | "Rejected",
           object.explanation as string
         );
@@ -59,8 +80,13 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
           });
         }
       });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error saving result to the database", error);
+      toast({
+        variant: "destructive",
+        title: "Could not save Deal Save Status",
+        description: `An error occured: ${error.message}`,
+      });
     }
   };
 
@@ -143,7 +169,7 @@ const ScreenDealDialog = (dealProps: DealCardProps) => {
 
         <Button
           className="mt-6 w-full sm:w-auto"
-          onClick={() => submit(dealProps)}
+          onClick={() => submit({ ...dealContent, fileContent })}
           disabled={isLoading}
         >
           Screen This Deal
