@@ -24,6 +24,9 @@ import { resolve } from "path";
 import Link from "next/link";
 import EditInferDealDialog from "../../components/dialogs/edit-infer-deal-dialog";
 import SaveInferredDeal from "../../actions/save-infer-deal";
+import { useToast } from "@repo/ui/hooks/use-toast";
+import { ToastAction } from "@repo/ui/components/toast";
+import { useRouter } from "next/navigation";
 
 const InferDealSchema = z.object({
   description: z
@@ -37,6 +40,8 @@ export type InferDealSchemaType = z.infer<typeof InferDealSchema>;
 export const maxDuration = 30;
 
 const InferNewDealPage = () => {
+  const router = useRouter();
+  const { toast } = useToast();
   const [isPending, startTransition] = useTransition();
   const [saveDealPending, saveDealTransition] = useTransition();
   const [generation, setGeneration] = useState<string>("");
@@ -121,10 +126,41 @@ const InferNewDealPage = () => {
           <div className="mt-4 md:mt-6 flex items-center justify-between">
             <Button
               variant={"success"}
-              onClick={async () => {
-                await SaveInferredDeal({ generation });
+              onClick={() => {
+                saveDealTransition(async () => {
+                  const response = await SaveInferredDeal({ generation });
+                  if (response.type === "success") {
+                    toast({
+                      title: "Success",
+                      description: response.message,
+                      action: (
+                        <ToastAction
+                          altText="View Deal"
+                          onClick={() => {
+                            router.push(`/raw-deals/${response.documentId}`);
+                          }}
+                        >
+                          View Deal
+                        </ToastAction>
+                      ),
+                      variant: "success",
+                    });
+                  } else {
+                    toast({
+                      title: "Error",
+                      description: response.message,
+                      variant: "destructive",
+                    });
+                  }
+                });
               }}
-              disabled={generation === "" ? true : false}
+              disabled={
+                generation === ""
+                  ? true
+                  : false || saveDealPending
+                    ? true
+                    : false
+              }
             >
               <Save className="mr-2 size-4" /> Save Deal
             </Button>

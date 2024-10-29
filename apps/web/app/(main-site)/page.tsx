@@ -10,12 +10,6 @@ export const metadata = {
 };
 
 export default async function Home() {
-  const session = await auth();
-
-  if (!session) {
-    return redirect("/auth/login");
-  }
-
   return (
     <React.Fragment>
       <HeroSection />

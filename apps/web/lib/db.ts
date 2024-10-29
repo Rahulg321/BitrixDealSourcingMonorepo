@@ -243,3 +243,25 @@ export async function fetchSpecificDeal(
     throw error;
   }
 }
+
+export async function fetchSpecificInferredDeal(
+  dealId: string
+): Promise<SnapshotDeal | null> {
+  try {
+    const dealRef = doc(db, "inferred-deals", dealId); // Replace "deals" with your collection name
+    const dealSnapshot = await getDoc(dealRef);
+
+    if (dealSnapshot.exists()) {
+      return {
+        id: dealSnapshot.id,
+        ...dealSnapshot.data(),
+      } as SnapshotDeal;
+    } else {
+      console.log("No such document!");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error fetching the deal:", error);
+    throw error;
+  }
+}

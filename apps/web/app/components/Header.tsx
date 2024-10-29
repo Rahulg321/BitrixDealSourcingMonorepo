@@ -34,12 +34,6 @@ import {
 import { Session } from "next-auth";
 import { ChevronDown } from "lucide-react";
 import { signOut } from "next-auth/react";
-// import Search from "./search";
-
-// const searchClient = algoliasearch(
-//   "KNMFQH2NOH",
-//   "4ad9f0c208468e716a2cce1f1ad148fb"
-// );
 
 type HeaderProps = {
   session: Session | null;
@@ -160,31 +154,9 @@ function DesktopMenu() {
           </Link>
         );
       })}
-      {/* <InstantSearch
-        searchClient={searchClient}
-        indexName="deals_index"
-        insights
-      >
-        <Configure hitsPerPage={5} />
-        <SearchBox />
-        <Hits hitComponent={Hit} />
-        <Pagination />
-      </InstantSearch> */}
     </div>
   );
 }
-
-// function Hit({ hit }: any) {
-//   console.log("hit", hit);
-//   return (
-//     <article className="bg-red-300">
-//       <h1>
-//         <Highlight attribute="data.title" hit={hit} />
-//       </h1>
-//       <p>${hit.data.asking_price}</p>
-//     </article>
-//   );
-// }
 
 function AuthDialogNavs() {
   return (
@@ -212,12 +184,6 @@ function ProfileMenu({ session }: { session: Session | null }) {
         </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        {/* <DropdownMenuItem asChild>
-          <Link href={`/profile/${session?.user?.id}`}>Profile</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem> */}
-        {/* <DropdownMenuSeparator /> */}
         <DropdownMenuItem onClick={() => signOut()}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
