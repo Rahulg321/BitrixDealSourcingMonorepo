@@ -15,22 +15,14 @@ import {
   newDealSchema,
   NewDealSchemaZodType,
 } from "../components/forms/CreateNewDealForm";
-import { auth } from "../../auth";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../lib/firebase";
 
 export const addDealToFirebase = async (data: NewDealSchemaZodType) => {
   try {
-    const session = await auth();
-
-    if (!session) {
-      return {
-        type: "error",
-        message: "User not logged in",
-      };
-    }
-
     const validatedFields = newDealSchema.safeParse(data);
 
-    if (validatedFields.error) {
+    if (!validatedFields.success) {
       return {
         type: "error",
         message: "Server Side Error from Zod",
@@ -39,11 +31,16 @@ export const addDealToFirebase = async (data: NewDealSchemaZodType) => {
 
     console.log("went to add deal to firebase......");
 
-    // revalidatePath("/raw-deals");
+    const docRef = await addDoc(collection(db, "deals"), {
+      ...validatedFields.data,
+    });
+
+    console.log("Document written with ID: ", docRef.id);
 
     return {
       type: "success",
-      message: "Successfully edited deal from firebase",
+      message: "Deal saved successfully",
+      documentId: docRef.id,
     };
   } catch (error) {
     console.error("an error occured adding deal to firebase", error);

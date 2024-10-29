@@ -1,7 +1,6 @@
 "use server";
 
 import { addDoc, collection } from "firebase/firestore";
-import { firestore } from "../../lib/firebase-admin";
 import { InferDealSchema } from "../components/schemas/infer-deal-schema";
 import { db } from "../../lib/firebase";
 

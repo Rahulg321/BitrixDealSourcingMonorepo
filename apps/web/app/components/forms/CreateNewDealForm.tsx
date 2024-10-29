@@ -28,6 +28,7 @@ import { Pen, PenIcon } from "lucide-react";
 import { useToast } from "@repo/ui/hooks/use-toast";
 import { addDealToFirebase } from "../../actions";
 import { useRouter } from "next/navigation";
+import { ToastAction } from "@repo/ui/components/toast";
 
 export const newDealSchema = z.object({
   first_name: z.string().min(1).optional(),
@@ -86,6 +87,16 @@ const CreateNewDealForm = () => {
         toast({
           variant: "success",
           title: "Successfully Added Deal 🎉",
+          action: (
+            <ToastAction
+              altText="View Deal"
+              onClick={() => {
+                router.push(`/raw-deals/${response.documentId}`);
+              }}
+            >
+              View Deal
+            </ToastAction>
+          ),
           description: response.message,
         });
 
