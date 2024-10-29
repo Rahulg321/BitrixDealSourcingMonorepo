@@ -81,20 +81,20 @@ const BulkImportDealsButton = () => {
 
             console.log("Columns:", columns);
             console.log("Rows:", rows[0]);
-            const mappedData = rows.map((row) => {
-              const rowObject = {};
-              columns.forEach((col, index) => {
-                rowObject[col] = row[index] || null; // Handle cases where data might be missing
-              });
-              return rowObject;
-            });
+            // const mappedData = rows.map((row) => {
+            //   const rowObject = {};
+            //   columns.forEach((col, index) => {
+            //     rowObject[col] = row[index] || null; // Handle cases where data might be missing
+            //   });
+            // return rowObject;
+            // });
 
-            console.log("total rows are", mappedData.length);
+            // console.log("total rows are", mappedData.length);
 
-            console.log(
-              "Mapped Data (Columns with corresponding Rows):",
-              mappedData[0]
-            );
+            // console.log(
+            //   "Mapped Data (Columns with corresponding Rows):",
+            //   mappedData[0]
+            // );
           }
         };
 

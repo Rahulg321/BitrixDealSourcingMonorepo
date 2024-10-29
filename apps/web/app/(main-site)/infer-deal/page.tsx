@@ -23,6 +23,7 @@ import { Pen, Save } from "lucide-react";
 import { resolve } from "path";
 import Link from "next/link";
 import EditInferDealDialog from "../../components/dialogs/edit-infer-deal-dialog";
+import SaveInferredDeal from "../../actions/save-infer-deal";
 
 const InferDealSchema = z.object({
   description: z
@@ -46,13 +47,6 @@ const InferNewDealPage = () => {
       description: "",
     },
   });
-
-  async function SaveDealToDatabase() {
-    saveDealTransition(async () => {
-      await new Promise((resolve) => setTimeout(resolve, 5000));
-      console.log("generation", JSON.parse(generation));
-    });
-  }
 
   async function onSubmit(values: InferDealSchemaType) {
     startTransition(async () => {
@@ -125,11 +119,17 @@ const InferNewDealPage = () => {
             </pre>
           </div>
           <div className="mt-4 md:mt-6 flex items-center justify-between">
-            <Button variant={"success"}>
+            <Button
+              variant={"success"}
+              onClick={async () => {
+                await SaveInferredDeal({ generation });
+              }}
+              disabled={generation === "" ? true : false}
+            >
               <Save className="mr-2 size-4" /> Save Deal
             </Button>
 
-            <EditInferDealDialog />
+            {/* <EditInferDealDialog /> */}
           </div>
         </div>
       </div>

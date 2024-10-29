@@ -2,7 +2,6 @@ import NextAuth, { DefaultSession } from "next-auth";
 // import authConfig from "./auth.config";
 import Google from "next-auth/providers/google";
 import { cert } from "firebase-admin/app";
-import { adminFirestore, firestore } from "./lib/firebase-admin";
 import { FirestoreAdapter } from "@auth/firebase-adapter";
 import { db } from "./lib/firebase";
 import { Firestore } from "firebase-admin/firestore";

@@ -51,10 +51,8 @@ const EditInferDealDialog = () => {
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
-        <Button asChild>
-          <Link href={`/infer-deal/edit`}>
-            <Pen className="mr-2 size-4" /> Edit Deal
-          </Link>
+        <Button>
+          <Pen className="mr-2 size-4" /> Edit Deal
         </Button>
       </DrawerTrigger>
       <DrawerContent>

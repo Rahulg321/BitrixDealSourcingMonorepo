@@ -26,8 +26,7 @@ import {
 import Link from "next/link";
 import { Pen, PenIcon } from "lucide-react";
 import { useToast } from "@repo/ui/hooks/use-toast";
-import { DealCardProps } from "../DealCard";
-import { addDealToFirebase, editDealFromFirebase } from "../../actions";
+import { addDealToFirebase } from "../../actions";
 import { useRouter } from "next/navigation";
 
 export const newDealSchema = z.object({

@@ -129,6 +129,20 @@ export const addToDb = async (collectionName: string, data: any) => {
   }
 };
 
+export const addToDbReturnId = async (collectionName: string, data: any) => {
+  try {
+    // collectionName is dynamic, so it can be "deals" or any other collection
+    const docRef = await addDoc(collection(db, collectionName), {
+      ...data, // Spread the dynamic data into the document
+      created_at: serverTimestamp(),
+      scraped_by: "Rahul Gupta",
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+};
+
 export const addDealsToDatabase = async (deals: any[]) => {
   for (const deal of deals) {
     try {

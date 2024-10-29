@@ -30,9 +30,9 @@ const NewDealPage = () => {
               keep in mind that the excel sheet should be in a specific format
               for bulk upload
             </p>
-            <div className="flex justify-center">
+            {/* <div className="flex justify-center">
               <BulkUploadDealsDialog />
-            </div>
+            </div> */}
           </div>
           <div className="p-6 bg-white shadow-lg rounded-lg border border-gray-200 h-fit">
             <h2 className="text-xl font-semibold mb-4 text-center">

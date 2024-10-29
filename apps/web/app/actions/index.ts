@@ -11,14 +11,35 @@ import {
   dealSchema,
   DealSchemaZodType,
 } from "../components/forms/EditDealForm";
-import { NewDealSchemaZodType } from "../components/forms/CreateNewDealForm";
+import {
+  newDealSchema,
+  NewDealSchemaZodType,
+} from "../components/forms/CreateNewDealForm";
+import { auth } from "../../auth";
 
 export const addDealToFirebase = async (data: NewDealSchemaZodType) => {
   try {
-    console.log("data in server is", data);
-    await addToDb("deals", data);
+    const session = await auth();
 
-    revalidatePath("/raw-deals");
+    if (!session) {
+      return {
+        type: "error",
+        message: "User not logged in",
+      };
+    }
+
+    const validatedFields = newDealSchema.safeParse(data);
+
+    if (validatedFields.error) {
+      return {
+        type: "error",
+        message: "Server Side Error from Zod",
+      };
+    }
+
+    console.log("went to add deal to firebase......");
+
+    // revalidatePath("/raw-deals");
 
     return {
       type: "success",
