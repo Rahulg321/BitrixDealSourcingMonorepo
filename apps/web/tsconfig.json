@@ -1,7 +1,7 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
-
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declaration": false,
     "declarationMap": false,
     "plugins": [
@@ -15,7 +15,8 @@
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "functions/src/index.js"
   ],
   "baseUrl": ".",
   "paths": {

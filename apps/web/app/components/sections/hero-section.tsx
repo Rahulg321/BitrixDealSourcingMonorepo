@@ -2,11 +2,9 @@ import { Button } from "@repo/ui/components/button";
 import { ArrowRight, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { auth } from "../../../auth";
 
 export default async function HeroSection() {
-  const authSession = await auth();
-  console.log("auth session", authSession);
+
 
   return (
     <section className="relative overflow-hidden min-h-screen">

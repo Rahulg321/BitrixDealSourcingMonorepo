@@ -4,6 +4,7 @@ import { Toaster } from "@repo/ui/components/toaster";
 import { GeistSans } from "geist/font/sans";
 
 import { cn } from "@repo/ui/lib/utils";
+import { AuthProvider } from "../components/auth-provider";
 
 export const metadata: Metadata = {
   title: "Dark Alpha Capital",
@@ -34,8 +35,10 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-        <main className="">{children}</main>
-        <Toaster />
+        <AuthProvider>
+          <main className="">{children}</main>
+          <Toaster />
+        </AuthProvider>
       </body>
     </html>
   );

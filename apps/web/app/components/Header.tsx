@@ -19,24 +19,14 @@ import {
   AvatarImage,
 } from "@repo/ui/components/avatar";
 
-import instantsearch from "instantsearch.js";
-
-import {
-  InstantSearch,
-  SearchBox,
-  Hits,
-  Highlight,
-  Pagination,
-  Configure,
-} from "react-instantsearch";
-
 // import { liteClient as algoliasearch } from "algoliasearch/lite";
 import { Session } from "next-auth";
 import { ChevronDown } from "lucide-react";
 import { signOut } from "next-auth/react";
+import { useAuth } from "./auth-provider";
+import { Button } from "@repo/ui/components/button";
 
 type HeaderProps = {
-  session: Session | null;
   classname?: string;
 };
 
@@ -47,9 +37,11 @@ export const NavLinks = [
   { navlink: "/admin", navlabel: "Admin Panel" },
 ];
 
-const Header = ({ classname, session }: HeaderProps) => {
+const Header = ({ classname }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  const auth = useAuth();
 
   return (
     <>
@@ -103,13 +95,25 @@ const Header = ({ classname, session }: HeaderProps) => {
               })}
             </div>
             <DesktopMenu />
-            {session ? (
-              <div className="flex items-center gap-4">
-                {/* <Search placeholder="search deals..." /> */}
-                <ProfileMenu session={session} />
-              </div>
+            {auth?.currentUser ? (
+              <Button
+                onClick={() => {
+                  auth
+                    ?.logout()
+                    .then(() => {
+                      console.log("logged out");
+                    })
+                    .catch(() => {
+                      console.log("something went wrong, could not log out");
+                    });
+                }}
+              >
+                Logout
+              </Button>
             ) : (
-              <AuthDialogNavs />
+              <Button variant={"link"} asChild>
+                <Link href={"/auth/login"}>Login</Link>
+              </Button>
             )}
           </ul>
         </nav>
@@ -161,22 +165,17 @@ function DesktopMenu() {
 function AuthDialogNavs() {
   return (
     <div className="hidden space-x-4 md:flex md:items-center">
-      <Link href={"/auth/login"}>Login</Link>
+      <Link href={"/auth/login"}>Logout</Link>
     </div>
   );
 }
 
-function ProfileMenu({ session }: { session: Session | null }) {
-  console.log("session in profile menu", session);
-
+function ProfileMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center gap-2">
         <Avatar>
-          <AvatarImage
-            src={session?.user?.image || "https://github.com/shadcn.png"}
-            alt="@shadcn"
-          />
+          <AvatarImage src={"https://github.com/shadcn.png"} alt="@shadcn" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <span className="flex items-center font-medium text-baseC">
